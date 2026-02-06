@@ -1,0 +1,258 @@
+/* 🎨 Zentrya Gold Theme Variables */
+:root {
+  --background: #000000;
+  --foreground: #ffffff;
+  --gold: #f59e0b;
+  --gold-light: #fbbf24;
+  --gold-dark: #d97706;
+  --gray-50: #fafafa;
+  --gray-100: #f5f5f5;
+  --gray-200: #e5e5e5;
+  --gray-300: #d4d4d4;
+  --gray-400: #a3a3a3;
+  --gray-500: #737373;
+  --gray-600: #525252;
+  --gray-700: #404040;
+  --gray-800: #262626;
+  --gray-900: #171717;
+  --gray-950: #0a0a0a;
+  --font-sans: var(--font-inter, 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif);
+}
+
+/* 🎬 SMOOTH PAGE TRANSITIONS - The key to making your site feel professional */
+.page-transition {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.page-transition.fadeOut {
+  animation: fadeOutDown 0.3s cubic-bezier(0.4, 0, 1, 1) forwards;
+}
+
+.page-transition.fadeIn {
+  animation: fadeInUp 0.4s cubic-bezier(0, 0, 0.2, 1) forwards;
+}
+
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ✨ Zentrya Gold Utilities */
+.text-gold {
+  color: var(--gold);
+}
+
+.text-gold-light {
+  color: var(--gold-light);
+}
+
+.text-gold-dark {
+  color: var(--gold-dark);
+}
+
+.bg-gold {
+  background-color: var(--gold);
+}
+
+.bg-gold-light {
+  background-color: var(--gold-light);
+}
+
+.bg-gold-dark {
+  background-color: var(--gold-dark);
+}
+
+.border-gold {
+  border-color: var(--gold);
+}
+
+/* 🎬 Netflix-style Animations */
+.fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.6s ease-out forwards;
+}
+
+.zoom-in {
+  animation: zoomIn 0.4s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* 📦 Container utilities */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.container-lg {
+  max-width: 1536px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.container-sm {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* 🎨 Gradient utilities */
+.gradient-gold {
+  background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-dark) 100%);
+}
+
+.gradient-dark {
+  background: linear-gradient(180deg, transparent 0%, var(--background) 100%);
+}
+
+.gradient-radial-gold {
+  background: radial-gradient(circle at center, var(--gold) 0%, transparent 70%);
+}
+
+/* 🎬 Netflix-style shimmer loading effect */
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--gray-900) 0%,
+    var(--gray-800) 50%,
+    var(--gray-900) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* 🎯 Card hover effects */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 40px rgba(245, 158, 11, 0.3);
+}
+
+/* 🎪 Backdrop blur utility */
+.backdrop-blur-strong {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* 🔗 Smooth link transitions */
+a {
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* 🎯 Button transitions */
+button {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* 📱 Mobile optimizations */
+@media (max-width: 768px) {
+  .container,
+  .container-lg,
+  .container-sm {
+    padding: 0 1rem;
+  }
+  
+  /* Faster transitions on mobile for better performance */
+  .page-transition.fadeOut {
+    animation-duration: 0.2s;
+  }
+  
+  .page-transition.fadeIn {
+    animation-duration: 0.3s;
+  }
+}
+
+/* 🎨 Smooth scrolling removed - Netflix keeps scroll position */
+html {
+  scroll-behavior: auto;
+}
+
+/* 💫 Loading state for route changes */
+.page-transition {
+  will-change: opacity, transform;
+}
+
+/* 🎭 Ensure smooth font rendering */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

@@ -1,0 +1,720 @@
+/* ===========================
+   ZENTRYA PROFILES PAGE STYLES
+   Who's Watching Screen
+   =========================== */
+
+/* CSS Variables */
+:root {
+  --zentrya-gold: #D4AF37;
+  --zentrya-gold-dark: #B8941F;
+  --zentrya-gold-hover: #E2B93B;
+  --zentrya-black: #000000;
+  --zentrya-dark-gray: #0D0D0D;
+  --zentrya-gray: #141414;
+  --zentrya-light-gray: #2F2F2F;
+  --zentrya-white: #FFFFFF;
+  --zentrya-text-gray: #B3B3B3;
+}
+
+/* ===========================
+   CONTAINER
+   =========================== */
+.profiles-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background */
+.profiles-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  background: linear-gradient(
+    135deg,
+    var(--zentrya-black) 0%,
+    var(--zentrya-dark-gray) 50%,
+    var(--zentrya-gray) 100%
+  );
+}
+
+.profiles-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at center,
+    transparent 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+}
+
+/* ===========================
+   HEADER
+   =========================== */
+.profiles-header {
+  position: relative;
+  z-index: 10;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profiles-header .logo {
+  font-family: 'Montserrat', 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--zentrya-gold);
+  letter-spacing: 2px;
+  cursor: pointer;
+  text-shadow: 0 2px 8px rgba(212, 175, 55, 0.4);
+  transition: transform 0.2s ease;
+}
+
+.profiles-header .logo:hover {
+  transform: scale(1.05);
+}
+
+/* ===========================
+   CONTENT
+   =========================== */
+.profiles-content {
+  position: relative;
+  z-index: 10;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  animation: fadeIn 0.6s ease;
+}
+
+.profiles-title {
+  font-family: 'Montserrat', 'Poppins', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--zentrya-white);
+  margin-bottom: 48px;
+  text-align: center;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+  animation: slideDown 0.6s ease;
+}
+
+/* ===========================
+   LOADING & ERROR STATES
+   =========================== */
+.profiles-loading,
+.profiles-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  color: var(--zentrya-white);
+  font-size: 1.25rem;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 4px solid rgba(212, 175, 55, 0.2);
+  border-top-color: var(--zentrya-gold);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.retry-button {
+  padding: 12px 32px;
+  background: var(--zentrya-gold);
+  color: var(--zentrya-black);
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Montserrat', 'Poppins', sans-serif;
+}
+
+.retry-button:hover {
+  background: var(--zentrya-gold-hover);
+  transform: scale(1.05);
+}
+
+/* Error Banner */
+.profiles-error-banner {
+  background: rgba(232, 124, 3, 0.2);
+  border: 1px solid rgba(232, 124, 3, 0.5);
+  padding: 16px 24px;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  max-width: 600px;
+  animation: slideDown 0.3s ease;
+}
+
+.profiles-error-banner p {
+  color: var(--zentrya-white);
+  margin: 0;
+}
+
+.profiles-error-banner button {
+  background: none;
+  border: none;
+  color: var(--zentrya-white);
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 0.875rem;
+}
+
+/* ===========================
+   PROFILES GRID
+   =========================== */
+.profiles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 180px));
+  gap: 32px;
+  justify-content: center;
+  margin-bottom: 48px;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+/* Profile Card */
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.5s ease backwards;
+}
+
+.profile-card:nth-child(1) { animation-delay: 0.1s; }
+.profile-card:nth-child(2) { animation-delay: 0.2s; }
+.profile-card:nth-child(3) { animation-delay: 0.3s; }
+.profile-card:nth-child(4) { animation-delay: 0.4s; }
+.profile-card:nth-child(5) { animation-delay: 0.5s; }
+.profile-card:nth-child(6) { animation-delay: 0.6s; }
+
+.profile-card:hover {
+  transform: scale(1.1);
+}
+
+.profile-card.managing:hover {
+  transform: scale(1.05);
+}
+
+/* Profile Avatar Wrapper */
+.profile-avatar-wrapper {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 3px solid transparent;
+  transition: all 0.3s ease;
+  background: var(--zentrya-light-gray);
+}
+
+.profile-card:hover .profile-avatar-wrapper {
+  border-color: var(--zentrya-gold);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+}
+
+.profile-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Profile Badges */
+.profile-pin-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.8);
+  color: var(--zentrya-gold);
+  padding: 6px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+}
+
+.profile-kids-badge {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  background: var(--zentrya-gold);
+  color: var(--zentrya-black);
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.profile-edit-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--zentrya-white);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.profile-card.managing:hover .profile-edit-overlay {
+  opacity: 1;
+}
+
+/* Profile Name */
+.profile-name {
+  color: var(--zentrya-text-gray);
+  font-size: 1.125rem;
+  font-weight: 500;
+  text-align: center;
+  transition: color 0.3s ease;
+  margin: 0;
+}
+
+.profile-card:hover .profile-name {
+  color: var(--zentrya-white);
+}
+
+/* Add Profile Card */
+.profile-card.add-profile .profile-avatar-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px dashed rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.profile-card.add-profile:hover .profile-avatar-wrapper {
+  background: rgba(212, 175, 55, 0.1);
+  border-color: var(--zentrya-gold);
+}
+
+.add-profile-icon {
+  color: rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease;
+}
+
+.profile-card.add-profile:hover .add-profile-icon {
+  color: var(--zentrya-gold);
+  transform: rotate(90deg);
+}
+
+/* ===========================
+   MANAGE PROFILES BUTTON
+   =========================== */
+.manage-profiles-button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 32px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: var(--zentrya-white);
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Montserrat', 'Poppins', sans-serif;
+}
+
+.manage-profiles-button:hover {
+  border-color: var(--zentrya-gold);
+  color: var(--zentrya-gold);
+  background: rgba(212, 175, 55, 0.1);
+  transform: scale(1.05);
+}
+
+/* ===========================
+   PIN MODAL
+   =========================== */
+.pin-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.pin-modal {
+  position: relative;
+  background: var(--zentrya-dark-gray);
+  border-radius: 8px;
+  padding: 48px 40px;
+  max-width: 450px;
+  width: 100%;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7);
+  animation: scaleIn 0.3s ease;
+}
+
+.pin-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: var(--zentrya-white);
+  font-size: 2rem;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.pin-modal-close:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--zentrya-gold);
+}
+
+.pin-modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+/* Pin Profile Info */
+.pin-profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.pin-profile-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 3px solid var(--zentrya-gold);
+}
+
+.pin-profile-info h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--zentrya-white);
+  margin: 0;
+  font-family: 'Montserrat', 'Poppins', sans-serif;
+}
+
+.pin-profile-info p {
+  font-size: 1rem;
+  color: var(--zentrya-text-gray);
+  margin: 0;
+}
+
+/* Pin Input */
+.pin-input-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.pin-input {
+  width: 200px;
+  padding: 16px;
+  background: var(--zentrya-gray);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  color: var(--zentrya-white);
+  font-size: 2rem;
+  text-align: center;
+  letter-spacing: 16px;
+  outline: none;
+  transition: all 0.2s ease;
+  font-family: monospace;
+}
+
+.pin-input::placeholder {
+  letter-spacing: 8px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.pin-input:focus {
+  border-color: var(--zentrya-gold);
+  box-shadow: 0 0 0 1px var(--zentrya-gold);
+}
+
+.pin-input.pin-error {
+  border-color: #E87C03;
+  animation: shake 0.4s ease;
+}
+
+.pin-error-message {
+  color: #E87C03;
+  font-size: 0.875rem;
+  margin: 0;
+  text-align: center;
+}
+
+/* Pin Buttons */
+.pin-submit-button,
+.pin-cancel-button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Montserrat', 'Poppins', sans-serif;
+}
+
+.pin-submit-button {
+  background: var(--zentrya-gold);
+  color: var(--zentrya-black);
+}
+
+.pin-submit-button:hover:not(:disabled) {
+  background: var(--zentrya-gold-hover);
+  transform: scale(1.02);
+}
+
+.pin-submit-button:disabled {
+  background: rgba(212, 175, 55, 0.3);
+  cursor: not-allowed;
+}
+
+.pin-cancel-button {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: var(--zentrya-white);
+}
+
+.pin-cancel-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--zentrya-white);
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+   =========================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .profiles-header {
+    padding: 20px 40px;
+  }
+
+  .profiles-title {
+    font-size: 3rem;
+  }
+
+  .profiles-grid {
+    gap: 24px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .profiles-header {
+    padding: 16px 20px;
+  }
+
+  .profiles-header .logo {
+    font-size: 2rem;
+  }
+
+  .profiles-title {
+    font-size: 2rem;
+    margin-bottom: 32px;
+  }
+
+  .profiles-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 140px));
+    gap: 20px;
+  }
+
+  .profile-avatar-wrapper {
+    width: 120px;
+    height: 120px;
+  }
+
+  .profile-name {
+    font-size: 1rem;
+  }
+
+  .manage-profiles-button {
+    font-size: 0.938rem;
+    padding: 12px 24px;
+  }
+
+  .pin-modal {
+    padding: 40px 24px;
+  }
+
+  .pin-profile-avatar {
+    width: 80px;
+    height: 80px;
+  }
+
+  .pin-profile-info h2 {
+    font-size: 1.5rem;
+  }
+
+  .pin-input {
+    width: 180px;
+    font-size: 1.75rem;
+    letter-spacing: 12px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .profiles-title {
+    font-size: 1.5rem;
+  }
+
+  .profiles-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .profile-avatar-wrapper {
+    width: 100px;
+    height: 100px;
+  }
+
+  .profile-name {
+    font-size: 0.875rem;
+  }
+
+  .manage-profiles-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .pin-modal {
+    padding: 32px 20px;
+  }
+
+  .pin-input {
+    width: 160px;
+    font-size: 1.5rem;
+  }
+}
+
+/* ===========================
+   ANIMATIONS
+   =========================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-8px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(8px);
+  }
+}
+
+/* Focus Visible */
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--zentrya-gold);
+  outline-offset: 2px;
+}
+
+/* Selection Styling */
+::selection {
+  background: var(--zentrya-gold);
+  color: var(--zentrya-black);
+}
+
+::-moz-selection {
+  background: var(--zentrya-gold);
+  color: var(--zentrya-black);
+}

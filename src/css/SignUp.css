@@ -1,0 +1,937 @@
+/* ===========================
+   ZENTRYA SIGNUP - NETFLIX STYLE
+   White Background, Clean UI
+   =========================== */
+
+/* CSS Variables */
+:root {
+  --zentrya-gold: #D4AF37;
+  --zentrya-gold-dark: #B8941F;
+  --zentrya-gold-hover: #E2B93B;
+  --zentrya-black: #000000;
+  --zentrya-white: #FFFFFF;
+  --zentrya-gray-50: #FAFAFA;
+  --zentrya-gray-100: #F5F5F5;
+  --zentrya-gray-200: #E5E5E5;
+  --zentrya-gray-300: #D4D4D4;
+  --zentrya-gray-400: #A3A3A3;
+  --zentrya-gray-500: #737373;
+  --zentrya-gray-700: #404040;
+  --zentrya-gray-800: #262626;
+  --zentrya-error: #E87C03;
+  --zentrya-success: #46D369;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===========================
+   SIGNUP CONTAINER
+   =========================== */
+.signup-container {
+  min-height: 100vh;
+  background: var(--zentrya-white);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===========================
+   HEADER
+   =========================== */
+.signup-header {
+  border-bottom: 1px solid var(--zentrya-gray-200);
+  background: var(--zentrya-white);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Montserrat', 'Poppins', sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--zentrya-gold);
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.logo:hover {
+  opacity: 0.8;
+}
+
+.signin-link {
+  background: none;
+  border: none;
+  color: var(--zentrya-gray-800);
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.signin-link:hover {
+  color: var(--zentrya-black);
+  text-decoration: underline;
+}
+
+/* ===========================
+   MAIN CONTENT
+   =========================== */
+.signup-content {
+  flex: 1;
+  width: 100%;
+  padding: 60px 40px 80px;
+}
+
+/* Step 1: Centered narrow layout */
+.signup-form-wrapper:has(.signup-form:not(.plan-selection):not(.profile-creation)) {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Step 2 & 3: Full width layout - NO MAX WIDTH */
+.signup-form-wrapper:has(.plan-selection),
+.signup-form-wrapper:has(.profile-creation) {
+  max-width: 100%;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 60px;
+}
+
+/* ===========================
+   PROGRESS INDICATOR
+   =========================== */
+.progress-container {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.progress-text {
+  font-size: 0.813rem;
+  font-weight: 400;
+  color: var(--zentrya-gray-500);
+  letter-spacing: 0.5px;
+  display: block;
+}
+
+/* ===========================
+   FORM WRAPPER
+   =========================== */
+.signup-form-wrapper {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===========================
+   FORM CONTENT
+   =========================== */
+.signup-form {
+  width: 100%;
+}
+
+/* Step 1: Centered text */
+.signup-form:not(.plan-selection):not(.profile-creation) .signup-title {
+  text-align: center;
+}
+
+.signup-form:not(.plan-selection):not(.profile-creation) .signup-subtitle {
+  text-align: center;
+}
+
+/* Step 2 & 3: Left-aligned text */
+.plan-selection .signup-title,
+.profile-creation .signup-title {
+  text-align: left;
+}
+
+.plan-selection .signup-subtitle,
+.profile-creation .signup-subtitle {
+  text-align: left;
+}
+
+.signup-title {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--zentrya-black);
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.signup-subtitle {
+  font-size: 1.125rem;
+  color: var(--zentrya-gray-700);
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+/* ===========================
+   API ERROR BANNER
+   =========================== */
+.api-error-banner {
+  background: rgba(232, 124, 3, 0.1);
+  border: 1px solid var(--zentrya-error);
+  border-radius: 4px;
+  padding: 16px;
+  margin-bottom: 20px;
+  animation: slideDown 0.3s ease;
+}
+
+.api-error-banner p {
+  color: var(--zentrya-error);
+  font-size: 0.938rem;
+  margin: 0;
+}
+
+.api-error-banner.warning {
+  background: rgba(232, 124, 3, 0.05);
+  border-color: rgba(232, 124, 3, 0.3);
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===========================
+   CONTACT TYPE SELECTOR
+   =========================== */
+.contact-type-selector {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.contact-type-btn {
+  flex: 1;
+  padding: 12px 20px;
+  background: var(--zentrya-white);
+  border: 1px solid var(--zentrya-gray-300);
+  border-radius: 4px;
+  color: var(--zentrya-gray-700);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.contact-type-btn:hover:not(:disabled) {
+  border-color: var(--zentrya-gray-400);
+}
+
+.contact-type-btn.active {
+  background: var(--zentrya-gold);
+  border-color: var(--zentrya-gold);
+  color: var(--zentrya-white);
+}
+
+.contact-type-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ===========================
+   FORM GROUPS
+   =========================== */
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.938rem;
+  font-weight: 400;
+  color: var(--zentrya-gray-700);
+  margin-bottom: 6px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 16px;
+  background: var(--zentrya-white);
+  border: 1px solid var(--zentrya-gray-300);
+  border-radius: 4px;
+  font-size: 1rem;
+  color: var(--zentrya-black);
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.form-input:hover:not(:disabled) {
+  border-color: var(--zentrya-gray-400);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--zentrya-black);
+  box-shadow: none;
+}
+
+.form-input::placeholder {
+  color: var(--zentrya-gray-400);
+}
+
+.form-input:disabled {
+  background: var(--zentrya-gray-100);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.form-input.input-error {
+  border-color: var(--zentrya-error);
+}
+
+.form-input.input-error:focus {
+  border-color: var(--zentrya-error);
+}
+
+/* Password Wrapper */
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper .form-input {
+  padding-right: 48px;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--zentrya-gray-500);
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+}
+
+.password-toggle:hover:not(:disabled) {
+  color: var(--zentrya-gray-700);
+}
+
+.password-toggle:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Error Message */
+.error-message {
+  color: var(--zentrya-error);
+  font-size: 0.875rem;
+  margin-top: 6px;
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+/* Input Hint */
+.input-hint {
+  color: var(--zentrya-gray-500);
+  font-size: 0.875rem;
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ===========================
+   CHECKBOX GROUP
+   =========================== */
+.checkbox-group {
+  margin-bottom: 24px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox-input {
+  display: none;
+}
+
+.checkbox-custom {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--zentrya-gray-300);
+  border-radius: 3px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  margin-top: 2px;
+}
+
+.checkbox-input:checked + .checkbox-custom {
+  background: var(--zentrya-gold);
+  border-color: var(--zentrya-gold);
+}
+
+.checkbox-input:checked + .checkbox-custom::after {
+  content: '✓';
+  color: var(--zentrya-white);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.checkbox-text {
+  color: var(--zentrya-gray-700);
+  font-size: 0.938rem;
+  line-height: 1.4;
+}
+
+/* ===========================
+   BUTTONS
+   =========================== */
+.next-button {
+  width: 100%;
+  padding: 16px 24px;
+  background: var(--zentrya-gold);
+  border: none;
+  border-radius: 4px;
+  color: var(--zentrya-white);
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.next-button:hover:not(:disabled) {
+  background: var(--zentrya-gold-hover);
+}
+
+.next-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.spinner-icon {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ===========================
+   PLAN SELECTION
+   =========================== */
+.plan-selection {
+  max-width: 100%;
+}
+
+.plan-selection .signup-title {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+}
+
+.plan-selection .signup-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 48px;
+}
+
+.plans-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.plan-card {
+  background: var(--zentrya-white);
+  border: 2px solid var(--zentrya-gray-300);
+  border-radius: 16px;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 600px;
+}
+
+.plan-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  border-color: var(--zentrya-gray-400);
+}
+
+.plan-card.selected {
+  border-color: var(--zentrya-gold);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.3);
+  transform: translateY(-4px);
+}
+
+.plan-card.popular::before {
+  content: 'Most Popular';
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--zentrya-gold);
+  color: var(--zentrya-white);
+  padding: 8px 20px;
+  font-size: 0.813rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  border-bottom-left-radius: 16px;
+  z-index: 1;
+}
+
+.plan-header {
+  background: linear-gradient(135deg, #3B5998 0%, #8B5CF6 100%);
+  padding: 48px 24px;
+  text-align: center;
+  color: var(--zentrya-white);
+  position: relative;
+}
+
+.plan-card:nth-child(1) .plan-header {
+  background: linear-gradient(135deg, #3B5998 0%, #5B7AB8 100%);
+}
+
+.plan-card:nth-child(2) .plan-header {
+  background: linear-gradient(135deg, #5B7AB8 0%, #7B8FC8 100%);
+}
+
+.plan-card:nth-child(3) .plan-header {
+  background: linear-gradient(135deg, #7B8FC8 0%, #8B5CF6 100%);
+}
+
+.plan-card:nth-child(4) .plan-header {
+  background: linear-gradient(135deg, #8B5CF6 0%, #A855F7 100%);
+}
+
+.plan-name {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--zentrya-white);
+  margin-bottom: 8px;
+}
+
+.plan-price {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 400;
+}
+
+.plan-checkmark {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  background: var(--zentrya-gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--zentrya-white);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+.plan-body {
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+.plan-feature {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--zentrya-gray-200);
+  font-size: 0.938rem;
+}
+
+.plan-feature:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.feature-label {
+  color: var(--zentrya-gray-500);
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.feature-value {
+  color: var(--zentrya-black);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.plan-feature.highlight .feature-value {
+  color: var(--zentrya-gold);
+  font-weight: 700;
+}
+
+/* ===========================
+   PROFILE CREATION
+   =========================== */
+.profile-creation {
+  max-width: 100%;
+}
+
+.avatar-selection {
+  margin-bottom: 24px;
+}
+
+.avatar-label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--zentrya-black);
+  margin-bottom: 16px;
+}
+
+.avatar-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.avatar-option {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 3px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.avatar-option:hover {
+  border-color: var(--zentrya-gray-300);
+  transform: scale(1.05);
+}
+
+.avatar-option.selected {
+  border-color: var(--zentrya-gold);
+  box-shadow: 0 0 0 1px var(--zentrya-gold);
+}
+
+.avatar-option img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar-checkmark {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 24px;
+  height: 24px;
+  background: var(--zentrya-gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--zentrya-white);
+}
+
+/* ===========================
+   ACCOUNT SUMMARY
+   =========================== */
+.account-summary {
+  background: var(--zentrya-gray-50);
+  border: 1px solid var(--zentrya-gray-200);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  font-size: 0.938rem;
+}
+
+.summary-item:not(:last-child) {
+  border-bottom: 1px solid var(--zentrya-gray-200);
+}
+
+.summary-label {
+  color: var(--zentrya-gray-600);
+  font-weight: 500;
+}
+
+.summary-value {
+  color: var(--zentrya-black);
+  font-weight: 600;
+  text-align: right;
+}
+
+/* ===========================
+   TERMS TEXT
+   =========================== */
+.terms-text {
+  text-align: center;
+  color: var(--zentrya-gray-500);
+  font-size: 0.875rem;
+  line-height: 1.4;
+  margin-top: 16px;
+}
+
+/* ===========================
+   FOOTER
+   =========================== */
+.signup-footer {
+  background: var(--zentrya-gray-50);
+  border-top: 1px solid var(--zentrya-gray-200);
+  padding: 40px 20px;
+  margin-top: auto;
+}
+
+.footer-content {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.footer-contact {
+  color: var(--zentrya-gray-600);
+  font-size: 1rem;
+  margin-bottom: 24px;
+}
+
+.footer-contact a {
+  color: var(--zentrya-gray-800);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-contact a:hover {
+  color: var(--zentrya-black);
+  text-decoration: underline;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 16px;
+}
+
+.footer-links a {
+  color: var(--zentrya-gray-600);
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--zentrya-black);
+  text-decoration: underline;
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+   =========================== */
+
+/* Large Desktop - Keep 4 columns */
+@media (min-width: 1400px) {
+  .signup-form-wrapper:has(.plan-selection) {
+    padding: 0 100px;
+  }
+}
+
+/* Desktop - Keep 4 columns */
+@media (max-width: 1399px) and (min-width: 1200px) {
+  .plans-container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+}
+
+/* Medium Tablet - 2 columns */
+@media (max-width: 1199px) and (min-width: 769px) {
+  .plans-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .signup-form-wrapper:has(.plan-selection) {
+    padding: 0 40px;
+  }
+  
+  .plan-card {
+    min-height: 550px;
+  }
+}
+
+/* Tablet and below */
+@media (max-width: 768px) {
+  .header-content {
+    padding: 16px 20px;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .signin-link {
+    font-size: 1rem;
+  }
+
+  .signup-content {
+    padding: 24px 20px 60px;
+  }
+  
+  .signup-form-wrapper:has(.plan-selection),
+  .signup-form-wrapper:has(.profile-creation) {
+    padding: 0 20px;
+  }
+
+  .signup-title {
+    font-size: 1.75rem;
+  }
+  
+  .plan-selection .signup-title {
+    font-size: 2rem;
+  }
+
+  .signup-subtitle {
+    font-size: 1rem;
+  }
+
+  .plans-container {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .plan-card {
+    min-height: auto;
+  }
+
+  .avatar-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .footer-links {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.25rem;
+  }
+
+  .signup-content {
+    padding: 20px 16px 40px;
+  }
+
+  .signup-title {
+    font-size: 1.5rem;
+  }
+  
+  .plan-selection .signup-title {
+    font-size: 1.75rem;
+  }
+
+  .signup-subtitle {
+    font-size: 0.938rem;
+  }
+
+  .form-input,
+  .next-button {
+    font-size: 0.938rem;
+  }
+
+  .avatar-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  .plan-header {
+    padding: 32px 20px;
+  }
+  
+  .plan-name {
+    font-size: 1.5rem;
+  }
+  
+  .plan-body {
+    padding: 24px 20px;
+  }
+
+  .footer-links {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===========================
+   ACCESSIBILITY
+   =========================== */
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--zentrya-gold);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: var(--zentrya-gold);
+  color: var(--zentrya-white);
+}
+
+::-moz-selection {
+  background: var(--zentrya-gold);
+  color: var(--zentrya-white);
+}

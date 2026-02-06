@@ -1,0 +1,962 @@
+/* ==================== ACCOUNT SETTINGS - PRODUCTION READY ==================== */
+/* Netflix-style Account Settings with Full Backend Integration */
+/* ZENTRYA Gold Branding: #D4AF37 */
+
+/* ==================== VARIABLES ==================== */
+:root {
+  --netflix-black: #141414;
+  --netflix-dark: #1a1a1a;
+  --card-bg: #2a2a2a;
+  --border-color: #3a3a3a;
+  --text-primary: #ffffff;
+  --text-secondary: #b3b3b3;
+  --zentrya-gold: #D4AF37;
+  --gold-hover: #c99d2e;
+  --success: #22c55e;
+  --error: #ef4444;
+  --warning: #f59e0b;
+  --info: #3b82f6;
+}
+
+/* ==================== GLOBAL STYLES ==================== */
+.account-settings {
+  min-height: 100vh;
+  background-color: var(--netflix-black);
+  color: var(--text-primary);
+}
+
+/* ==================== LOADING STATE ==================== */
+.account-settings-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--netflix-black);
+  color: var(--text-primary);
+  gap: 16px;
+}
+
+.account-settings-loading .spinner {
+  color: var(--zentrya-gold);
+  animation: spin 1s linear infinite;
+}
+
+.account-settings-loading p {
+  font-size: 16px;
+  color: var(--text-secondary);
+}
+
+/* ==================== HEADER ==================== */
+.account-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background-color: var(--netflix-black);
+  border-bottom: 1px solid var(--card-bg);
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  color: var(--text-primary);
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: var(--zentrya-gold);
+}
+
+.header-profile {
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.header-profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--zentrya-gold), var(--gold-hover));
+  color: var(--netflix-black);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* ==================== CONTAINER ==================== */
+.account-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 60px;
+}
+
+/* ==================== SIDEBAR ==================== */
+.account-sidebar {
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  margin-bottom: 4px;
+  color: var(--text-secondary);
+  background-color: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 15px;
+  border: none;
+  width: 100%;
+  text-align: left;
+}
+
+.sidebar-item svg {
+  flex-shrink: 0;
+}
+
+.sidebar-item:hover {
+  color: var(--text-primary);
+  background-color: var(--card-bg);
+}
+
+.sidebar-item.active {
+  color: var(--text-primary);
+  background-color: var(--card-bg);
+  font-weight: 500;
+}
+
+/* ==================== MAIN CONTENT ==================== */
+.account-main {
+  max-width: 720px;
+}
+
+.page-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 32px;
+  color: var(--text-primary);
+}
+
+/* ==================== MESSAGE BANNER ==================== */
+.message-banner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  animation: slideDown 0.3s ease;
+  font-size: 14px;
+}
+
+.message-banner.success {
+  background-color: rgba(34, 197, 94, 0.15);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  color: var(--success);
+}
+
+.message-banner.error {
+  background-color: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: var(--error);
+}
+
+/* ==================== SECTION CONTENT ==================== */
+.section-content {
+  animation: fadeIn 0.4s ease;
+}
+
+.section-content h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+}
+
+/* ==================== MEMBER BADGE ==================== */
+.member-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background-color: var(--zentrya-gold);
+  color: var(--netflix-black);
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 32px;
+}
+
+/* ==================== CARDS ==================== */
+.details-card,
+.membership-card,
+.security-card,
+.profiles-card,
+.no-subscription-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 32px;
+  margin-bottom: 24px;
+  transition: border-color 0.3s ease;
+}
+
+.details-card:hover,
+.membership-card:hover {
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
+/* ==================== DETAIL ROWS ==================== */
+.detail-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.detail-row:first-child {
+  padding-top: 0;
+}
+
+.detail-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.detail-label svg {
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+
+.detail-value {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-primary);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.verified-icon {
+  color: var(--success);
+}
+
+/* ==================== QUICK LINKS ==================== */
+.quick-links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.quick-link-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.quick-link-card:hover {
+  border-color: var(--zentrya-gold);
+  transform: translateY(-2px);
+}
+
+.link-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(212, 175, 55, 0.1);
+  border-radius: 8px;
+  color: var(--zentrya-gold);
+  flex-shrink: 0;
+}
+
+.link-content {
+  flex: 1;
+}
+
+.link-content h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: var(--text-primary);
+}
+
+.link-content p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.quick-link-card > svg {
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+
+/* ==================== MEMBERSHIP SECTION ==================== */
+.membership-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.membership-header h2 {
+  margin: 0;
+}
+
+/* STATUS BADGES */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.status-badge-active {
+  background-color: rgba(34, 197, 94, 0.15);
+  color: var(--success);
+  border: 1px solid var(--success);
+}
+
+.status-badge-canceled {
+  background-color: rgba(239, 68, 68, 0.15);
+  color: var(--error);
+  border: 1px solid var(--error);
+}
+
+.status-badge-expired {
+  background-color: rgba(156, 163, 175, 0.15);
+  color: #9ca3af;
+  border: 1px solid #9ca3af;
+}
+
+.status-badge-trial {
+  background-color: rgba(59, 130, 246, 0.15);
+  color: var(--info);
+  border: 1px solid var(--info);
+}
+
+.status-badge-inactive {
+  background-color: rgba(156, 163, 175, 0.15);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+}
+
+/* PLAN BADGE */
+.plan-badge {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: var(--zentrya-gold);
+  color: var(--netflix-black);
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* SUBSCRIPTION DETAILS */
+.subscription-details {
+  margin-top: 20px;
+}
+
+.payment-method .payment-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  background-color: var(--netflix-dark);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  color: var(--zentrya-gold);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.auto-renew-on {
+  color: var(--success);
+  font-weight: 600;
+}
+
+.auto-renew-off {
+  color: var(--text-secondary);
+}
+
+/* MEMBERSHIP ACTIONS */
+.membership-actions {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  gap: 12px;
+}
+
+.cancel-button,
+.reactivate-button {
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.cancel-button {
+  background-color: transparent;
+  border: 1px solid var(--error);
+  color: var(--error);
+}
+
+.cancel-button:hover:not(:disabled) {
+  background-color: rgba(239, 68, 68, 0.1);
+}
+
+.reactivate-button {
+  background-color: var(--zentrya-gold);
+  color: var(--netflix-black);
+}
+
+.reactivate-button:hover {
+  background-color: var(--gold-hover);
+}
+
+.cancel-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* NO SUBSCRIPTION CARD */
+.no-subscription-card {
+  text-align: center;
+  padding: 60px 40px;
+}
+
+.no-sub-icon {
+  opacity: 0.3;
+  margin-bottom: 24px;
+  color: var(--text-secondary);
+}
+
+.no-subscription-card h2 {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.no-subscription-card p {
+  color: var(--text-secondary);
+  margin-bottom: 32px;
+  font-size: 15px;
+}
+
+.subscribe-button {
+  padding: 14px 32px;
+  background-color: var(--zentrya-gold);
+  color: var(--netflix-black);
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.subscribe-button:hover {
+  background-color: var(--gold-hover);
+  transform: translateY(-2px);
+}
+
+/* ==================== SECURITY SECTION ==================== */
+.password-form {
+  max-width: 400px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.password-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-input input {
+  width: 100%;
+  padding: 12px 48px 12px 16px;
+  background-color: var(--netflix-dark);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  color: var(--text-primary);
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.password-input input:focus {
+  outline: none;
+  border-color: var(--zentrya-gold);
+  background-color: var(--card-bg);
+}
+
+.password-input input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 12px;
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.toggle-password:hover {
+  color: var(--text-primary);
+}
+
+.save-button {
+  width: 100%;
+  padding: 14px 24px;
+  margin-top: 24px;
+  background-color: var(--text-primary);
+  color: var(--netflix-black);
+  border: none;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.save-button:hover:not(:disabled) {
+  background-color: var(--zentrya-gold);
+}
+
+.save-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.save-button .spinner {
+  animation: spin 1s linear infinite;
+}
+
+/* ==================== DEVICES SECTION ==================== */
+.devices-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.device-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 24px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.device-card:hover {
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
+.device-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(212, 175, 55, 0.1);
+  border-radius: 8px;
+  color: var(--zentrya-gold);
+  flex-shrink: 0;
+}
+
+.device-info {
+  flex: 1;
+}
+
+.device-info h3 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: var(--text-primary);
+}
+
+.current-device-badge {
+  display: inline-flex;
+  padding: 4px 10px;
+  background-color: rgba(34, 197, 94, 0.15);
+  color: var(--success);
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.device-info p {
+  color: var(--text-secondary);
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.device-meta {
+  font-size: 13px !important;
+  color: var(--text-secondary) !important;
+}
+
+.logout-device-button {
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  color: var(--text-primary);
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.logout-device-button:hover:not(:disabled) {
+  border-color: var(--zentrya-gold);
+  color: var(--zentrya-gold);
+}
+
+.logout-device-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.logout-all-button {
+  width: 100%;
+  padding: 14px 24px;
+  margin-top: 24px;
+  background-color: transparent;
+  border: 1px solid var(--error);
+  border-radius: 4px;
+  color: var(--error);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logout-all-button:hover:not(:disabled) {
+  background-color: rgba(239, 68, 68, 0.1);
+}
+
+.logout-all-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.no-devices {
+  text-align: center;
+  padding: 40px;
+  color: var(--text-secondary);
+  font-size: 15px;
+}
+
+/* ==================== PROFILES SECTION ==================== */
+.profiles-card {
+  text-align: center;
+  padding: 40px;
+}
+
+.profiles-card h2 {
+  margin-bottom: 12px;
+}
+
+.profiles-card p {
+  color: var(--text-secondary);
+  margin-bottom: 32px;
+  font-size: 15px;
+}
+
+.manage-profiles-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 28px;
+  background-color: var(--zentrya-gold);
+  color: var(--netflix-black);
+  border: none;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.manage-profiles-button:hover {
+  background-color: var(--gold-hover);
+  transform: translateY(-2px);
+}
+
+/* ==================== ANIMATIONS ==================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+
+/* Tablet (768px - 1024px) */
+@media (max-width: 1024px) {
+  .account-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 30px;
+  }
+
+  .account-sidebar {
+    position: static;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+  }
+
+  .sidebar-item {
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px 8px;
+    font-size: 13px;
+  }
+
+  .sidebar-item svg {
+    margin: 0;
+  }
+
+  .quick-links {
+    grid-template-columns: 1fr;
+  }
+
+  .page-title {
+    font-size: 36px;
+  }
+}
+
+/* Mobile (less than 768px) */
+@media (max-width: 768px) {
+  .account-header {
+    padding: 16px 20px;
+  }
+
+  .account-container {
+    padding: 20px;
+    gap: 24px;
+  }
+
+  .account-sidebar {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+  }
+
+  .sidebar-item {
+    font-size: 12px;
+    padding: 10px 6px;
+  }
+
+  .sidebar-item svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .page-title {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+
+  .details-card,
+  .membership-card,
+  .security-card,
+  .profiles-card,
+  .no-subscription-card {
+    padding: 24px;
+  }
+
+  .quick-links {
+    grid-template-columns: 1fr;
+  }
+
+  .quick-link-card {
+    padding: 20px;
+  }
+
+  .link-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .link-content h3 {
+    font-size: 14px;
+  }
+
+  .link-content p {
+    font-size: 12px;
+  }
+
+  .password-form {
+    max-width: 100%;
+  }
+
+  .device-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .logout-device-button {
+    width: 100%;
+  }
+
+  .membership-actions {
+    flex-direction: column;
+  }
+
+  .cancel-button,
+  .reactivate-button {
+    width: 100%;
+  }
+}
+
+/* Small Mobile (less than 480px) */
+@media (max-width: 480px) {
+  .account-container {
+    padding: 16px;
+  }
+
+  .account-sidebar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .page-title {
+    font-size: 24px;
+  }
+
+  .details-card,
+  .membership-card,
+  .security-card {
+    padding: 20px;
+  }
+
+  .detail-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .detail-value {
+    width: 100%;
+  }
+
+  .member-badge {
+    font-size: 13px;
+    padding: 10px 16px;
+  }
+
+  .status-badge {
+    font-size: 12px;
+    padding: 4px 12px;
+  }
+
+  .plan-badge {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
