@@ -17,7 +17,7 @@ import {
   Filter,
   SlidersHorizontal
 } from 'lucide-react';
-import '../css/Search.css';
+import '../css/search.css';
 
 const Search = () => {
   const navigate = useNavigate();
