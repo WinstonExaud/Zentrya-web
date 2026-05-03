@@ -1,5 +1,5 @@
 // src/components/Careers.jsx
-// Careers page for Zentrya - Jobs, Internships, Talent Submissions
+// Careers page for Zentrya Tv - Jobs, Internships, Talent Submissions
 
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
@@ -287,6 +287,7 @@ export default function Careers() {
           <div className="text-2xl md:text-3xl font-bold tracking-wider">
             <span className="text-yellow-500">ZEN</span>
             <span className="text-white">TRYA</span>
+            <span className="text-yellow-500"> TV</span>
           </div>
         </Link>
 
@@ -354,15 +355,15 @@ export default function Careers() {
         </div>
       </section>
 
-      {/* Why Join Zentrya */}
+      {/* Why Join Zentrya Tv */}
       <section className="px-6 md:px-12 py-24 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-4">
-              Why Join <span className="text-yellow-500">Zentrya?</span>
+              Why Join <span className="text-yellow-500">Zentrya Tv?</span>
             </h2>
             <p className="text-gray-400 text-lg max-w-3xl mx-auto">
-              We're building something special. Here's what makes Zentrya an amazing place to work.
+              We're building something special. Here's what makes Zentrya Tv an amazing place to work.
             </p>
           </div>
 
@@ -426,7 +427,7 @@ export default function Careers() {
               Open <span className="text-yellow-500">Positions</span>
             </h2>
             <p className="text-gray-400 text-lg mb-8">
-              Find your perfect role at Zentrya
+              Find your perfect role at Zentrya Tv
             </p>
 
             {/* Category Filter */}
@@ -523,7 +524,7 @@ export default function Careers() {
               <span className="text-yellow-500">Internship</span> Programs
             </h2>
             <p className="text-gray-400 text-lg">
-              Launch your career with hands-on experience at Zentrya
+              Launch your career with hands-on experience at Zentrya Tv
             </p>
           </div>
 
@@ -780,7 +781,7 @@ export default function Careers() {
                 onChange={(e) => setTalentForm({...talentForm, description: e.target.value})}
                 rows={6}
                 className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-md text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-500"
-                placeholder="Share your experience, achievements, and why you want to work with Zentrya..."
+                placeholder="Share your experience, achievements, and why you want to work with Zentrya Tv..."
               />
             </div>
 
@@ -811,7 +812,8 @@ export default function Careers() {
           <div className="mb-12">
             <div className="text-3xl font-bold mb-3">
               <span className="text-yellow-500">ZEN</span>
-              <span className="text-white">TRYA</span>
+              <span className="text-white">TRYA</span>       
+              <span className="text-yellow-500"> TV</span>
             </div>
             <p className="text-gray-400">The Future of Entertainment in Tanzania 🇹🇿</p>
           </div>
@@ -911,7 +913,7 @@ export default function Careers() {
           <div className="pt-8 border-t border-gray-900">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <p className="text-gray-500 text-sm">
-                &copy; 2025 Zentrya. All rights reserved.
+                &copy; 2025 Zentrya Tv. All rights reserved.
               </p>
               <div className="flex items-center gap-6">
                 <a href="#" className="text-gray-500 hover:text-yellow-500 transition-colors">

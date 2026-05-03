@@ -162,7 +162,7 @@ const Login = () => {
       await login(emailOrPhone, formData.password);
       
       console.log('✅ Login successful');
-      toast.success('Welcome back to Zentrya! 🎬');
+      toast.success('Welcome back to Zentrya Tv! 🎬');
       
       // Navigate to profile selection or home
       navigate('/profiles');
@@ -192,7 +192,7 @@ const Login = () => {
       await verifyOtp(emailOrPhone, formData.otp);
       
       console.log('✅ OTP verified successfully');
-      toast.success('Welcome back to Zentrya! 🎬');
+      toast.success('Welcome back to Zentrya Tv! 🎬');
       
       // Navigate to profile selection or home
       navigate('/profiles');
@@ -248,7 +248,7 @@ const Login = () => {
       <div className="absolute inset-0 z-0">
         <img 
           src={loginBackground} 
-          alt="Zentrya Background" 
+          alt="Zentrya Tv Background" 
           className="w-full h-full object-cover"
           onError={(e) => {
             e.currentTarget.style.display = 'none';
@@ -467,7 +467,7 @@ const Login = () => {
 
               {/* Sign Up Prompt */}
               <div className="text-center pt-4">
-                <span className="text-gray-400">New to Zentrya? </span>
+                <span className="text-gray-400">New to Zentrya Tv? </span>
                 <a 
                   href="/signup" 
                   className="text-yellow-500 hover:text-yellow-400 transition-colors font-semibold"

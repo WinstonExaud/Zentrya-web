@@ -509,7 +509,7 @@ const AccountSettings = () => {
                   </div>
                   <div className="link-content">
                     <h3>Profiles</h3>
-                    <p>Manage your ZENTRYA profiles</p>
+                    <p>Manage your Zentrya Tv profiles</p>
                   </div>
                   <ChevronRight size={20} />
                 </div>
@@ -633,7 +633,7 @@ const AccountSettings = () => {
                 <div className="no-subscription-card">
                   <CreditCard size={64} className="no-sub-icon" />
                   <h2>No Active Subscription</h2>
-                  <p>Subscribe to ZENTRYA Premium to access unlimited African content</p>
+                  <p>Subscribe to Zentrya Tv Premium to access unlimited African content</p>
                   <button 
                     className="subscribe-button"
                     onClick={() => navigate('/subscribe')}
@@ -812,7 +812,7 @@ const AccountSettings = () => {
             <div className="section-content">
               <div className="profiles-card">
                 <h2>Profiles</h2>
-                <p>Manage who's watching ZENTRYA on your account</p>
+                <p>Manage who's watching Zentrya Tv on your account</p>
                 
                 <button
                   className="manage-profiles-button"

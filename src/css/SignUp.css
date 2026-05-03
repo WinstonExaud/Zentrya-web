@@ -1,25 +1,25 @@
 /* ===========================
-   ZENTRYA SIGNUP - NETFLIX STYLE
+   Zentrya SIGNUP - NETFLIX STYLE
    White Background, Clean UI
    =========================== */
 
 /* CSS Variables */
 :root {
-  --zentrya-gold: #D4AF37;
-  --zentrya-gold-dark: #B8941F;
-  --zentrya-gold-hover: #E2B93B;
-  --zentrya-black: #000000;
-  --zentrya-white: #FFFFFF;
-  --zentrya-gray-50: #FAFAFA;
-  --zentrya-gray-100: #F5F5F5;
-  --zentrya-gray-200: #E5E5E5;
-  --zentrya-gray-300: #D4D4D4;
-  --zentrya-gray-400: #A3A3A3;
-  --zentrya-gray-500: #737373;
-  --zentrya-gray-700: #404040;
-  --zentrya-gray-800: #262626;
-  --zentrya-error: #E87C03;
-  --zentrya-success: #46D369;
+  --Zentrya-gold: #D4AF37;
+  --Zentrya-gold-dark: #B8941F;
+  --Zentrya-gold-hover: #E2B93B;
+  --Zentrya-black: #000000;
+  --Zentrya-white: #FFFFFF;
+  --Zentrya-gray-50: #FAFAFA;
+  --Zentrya-gray-100: #F5F5F5;
+  --Zentrya-gray-200: #E5E5E5;
+  --Zentrya-gray-300: #D4D4D4;
+  --Zentrya-gray-400: #A3A3A3;
+  --Zentrya-gray-500: #737373;
+  --Zentrya-gray-700: #404040;
+  --Zentrya-gray-800: #262626;
+  --Zentrya-error: #E87C03;
+  --Zentrya-success: #46D369;
 }
 
 * {
@@ -39,7 +39,7 @@ body {
    =========================== */
 .signup-container {
   min-height: 100vh;
-  background: var(--zentrya-white);
+  background: var(--Zentrya-white);
   display: flex;
   flex-direction: column;
 }
@@ -48,8 +48,8 @@ body {
    HEADER
    =========================== */
 .signup-header {
-  border-bottom: 1px solid var(--zentrya-gray-200);
-  background: var(--zentrya-white);
+  border-bottom: 1px solid var(--Zentrya-gray-200);
+  background: var(--Zentrya-white);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -68,7 +68,7 @@ body {
   font-family: 'Montserrat', 'Poppins', sans-serif;
   font-size: 2rem;
   font-weight: 800;
-  color: var(--zentrya-gold);
+  color: var(--Zentrya-gold);
   letter-spacing: 1px;
   cursor: pointer;
   transition: opacity 0.2s ease;
@@ -81,7 +81,7 @@ body {
 .signin-link {
   background: none;
   border: none;
-  color: var(--zentrya-gray-800);
+  color: var(--Zentrya-gray-800);
   font-size: 1.125rem;
   font-weight: 600;
   cursor: pointer;
@@ -89,7 +89,7 @@ body {
 }
 
 .signin-link:hover {
-  color: var(--zentrya-black);
+  color: var(--Zentrya-black);
   text-decoration: underline;
 }
 
@@ -128,7 +128,7 @@ body {
 .progress-text {
   font-size: 0.813rem;
   font-weight: 400;
-  color: var(--zentrya-gray-500);
+  color: var(--Zentrya-gray-500);
   letter-spacing: 0.5px;
   display: block;
 }
@@ -181,14 +181,14 @@ body {
 .signup-title {
   font-size: 2rem;
   font-weight: 500;
-  color: var(--zentrya-black);
+  color: var(--Zentrya-black);
   margin-bottom: 12px;
   line-height: 1.2;
 }
 
 .signup-subtitle {
   font-size: 1.125rem;
-  color: var(--zentrya-gray-700);
+  color: var(--Zentrya-gray-700);
   margin-bottom: 24px;
   line-height: 1.5;
 }
@@ -198,7 +198,7 @@ body {
    =========================== */
 .api-error-banner {
   background: rgba(232, 124, 3, 0.1);
-  border: 1px solid var(--zentrya-error);
+  border: 1px solid var(--Zentrya-error);
   border-radius: 4px;
   padding: 16px;
   margin-bottom: 20px;
@@ -206,7 +206,7 @@ body {
 }
 
 .api-error-banner p {
-  color: var(--zentrya-error);
+  color: var(--Zentrya-error);
   font-size: 0.938rem;
   margin: 0;
 }
@@ -239,10 +239,10 @@ body {
 .contact-type-btn {
   flex: 1;
   padding: 12px 20px;
-  background: var(--zentrya-white);
-  border: 1px solid var(--zentrya-gray-300);
+  background: var(--Zentrya-white);
+  border: 1px solid var(--Zentrya-gray-300);
   border-radius: 4px;
-  color: var(--zentrya-gray-700);
+  color: var(--Zentrya-gray-700);
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
@@ -250,13 +250,13 @@ body {
 }
 
 .contact-type-btn:hover:not(:disabled) {
-  border-color: var(--zentrya-gray-400);
+  border-color: var(--Zentrya-gray-400);
 }
 
 .contact-type-btn.active {
-  background: var(--zentrya-gold);
-  border-color: var(--zentrya-gold);
-  color: var(--zentrya-white);
+  background: var(--Zentrya-gold);
+  border-color: var(--Zentrya-gold);
+  color: var(--Zentrya-white);
 }
 
 .contact-type-btn:disabled {
@@ -275,48 +275,48 @@ body {
   display: block;
   font-size: 0.938rem;
   font-weight: 400;
-  color: var(--zentrya-gray-700);
+  color: var(--Zentrya-gray-700);
   margin-bottom: 6px;
 }
 
 .form-input {
   width: 100%;
   padding: 16px;
-  background: var(--zentrya-white);
-  border: 1px solid var(--zentrya-gray-300);
+  background: var(--Zentrya-white);
+  border: 1px solid var(--Zentrya-gray-300);
   border-radius: 4px;
   font-size: 1rem;
-  color: var(--zentrya-black);
+  color: var(--Zentrya-black);
   transition: all 0.2s ease;
   font-family: inherit;
 }
 
 .form-input:hover:not(:disabled) {
-  border-color: var(--zentrya-gray-400);
+  border-color: var(--Zentrya-gray-400);
 }
 
 .form-input:focus {
   outline: none;
-  border-color: var(--zentrya-black);
+  border-color: var(--Zentrya-black);
   box-shadow: none;
 }
 
 .form-input::placeholder {
-  color: var(--zentrya-gray-400);
+  color: var(--Zentrya-gray-400);
 }
 
 .form-input:disabled {
-  background: var(--zentrya-gray-100);
+  background: var(--Zentrya-gray-100);
   cursor: not-allowed;
   opacity: 0.7;
 }
 
 .form-input.input-error {
-  border-color: var(--zentrya-error);
+  border-color: var(--Zentrya-error);
 }
 
 .form-input.input-error:focus {
-  border-color: var(--zentrya-error);
+  border-color: var(--Zentrya-error);
 }
 
 /* Password Wrapper */
@@ -335,7 +335,7 @@ body {
   transform: translateY(-50%);
   background: none;
   border: none;
-  color: var(--zentrya-gray-500);
+  color: var(--Zentrya-gray-500);
   cursor: pointer;
   padding: 8px;
   display: flex;
@@ -345,7 +345,7 @@ body {
 }
 
 .password-toggle:hover:not(:disabled) {
-  color: var(--zentrya-gray-700);
+  color: var(--Zentrya-gray-700);
 }
 
 .password-toggle:disabled {
@@ -355,7 +355,7 @@ body {
 
 /* Error Message */
 .error-message {
-  color: var(--zentrya-error);
+  color: var(--Zentrya-error);
   font-size: 0.875rem;
   margin-top: 6px;
   display: flex;
@@ -365,7 +365,7 @@ body {
 
 /* Input Hint */
 .input-hint {
-  color: var(--zentrya-gray-500);
+  color: var(--Zentrya-gray-500);
   font-size: 0.875rem;
   margin-top: 6px;
   display: flex;
@@ -395,7 +395,7 @@ body {
 .checkbox-custom {
   width: 20px;
   height: 20px;
-  border: 2px solid var(--zentrya-gray-300);
+  border: 2px solid var(--Zentrya-gray-300);
   border-radius: 3px;
   flex-shrink: 0;
   display: flex;
@@ -406,19 +406,19 @@ body {
 }
 
 .checkbox-input:checked + .checkbox-custom {
-  background: var(--zentrya-gold);
-  border-color: var(--zentrya-gold);
+  background: var(--Zentrya-gold);
+  border-color: var(--Zentrya-gold);
 }
 
 .checkbox-input:checked + .checkbox-custom::after {
   content: '✓';
-  color: var(--zentrya-white);
+  color: var(--Zentrya-white);
   font-size: 14px;
   font-weight: 700;
 }
 
 .checkbox-text {
-  color: var(--zentrya-gray-700);
+  color: var(--Zentrya-gray-700);
   font-size: 0.938rem;
   line-height: 1.4;
 }
@@ -429,10 +429,10 @@ body {
 .next-button {
   width: 100%;
   padding: 16px 24px;
-  background: var(--zentrya-gold);
+  background: var(--Zentrya-gold);
   border: none;
   border-radius: 4px;
-  color: var(--zentrya-white);
+  color: var(--Zentrya-white);
   font-size: 1.125rem;
   font-weight: 600;
   cursor: pointer;
@@ -445,7 +445,7 @@ body {
 }
 
 .next-button:hover:not(:disabled) {
-  background: var(--zentrya-gold-hover);
+  background: var(--Zentrya-gold-hover);
 }
 
 .next-button:disabled {
@@ -488,8 +488,8 @@ body {
 }
 
 .plan-card {
-  background: var(--zentrya-white);
-  border: 2px solid var(--zentrya-gray-300);
+  background: var(--Zentrya-white);
+  border: 2px solid var(--Zentrya-gray-300);
   border-radius: 16px;
   padding: 0;
   cursor: pointer;
@@ -504,11 +504,11 @@ body {
 .plan-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-  border-color: var(--zentrya-gray-400);
+  border-color: var(--Zentrya-gray-400);
 }
 
 .plan-card.selected {
-  border-color: var(--zentrya-gold);
+  border-color: var(--Zentrya-gold);
   box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.3);
   transform: translateY(-4px);
 }
@@ -518,8 +518,8 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  background: var(--zentrya-gold);
-  color: var(--zentrya-white);
+  background: var(--Zentrya-gold);
+  color: var(--Zentrya-white);
   padding: 8px 20px;
   font-size: 0.813rem;
   font-weight: 700;
@@ -532,7 +532,7 @@ body {
   background: linear-gradient(135deg, #3B5998 0%, #8B5CF6 100%);
   padding: 48px 24px;
   text-align: center;
-  color: var(--zentrya-white);
+  color: var(--Zentrya-white);
   position: relative;
 }
 
@@ -555,7 +555,7 @@ body {
 .plan-name {
   font-size: 2rem;
   font-weight: 700;
-  color: var(--zentrya-white);
+  color: var(--Zentrya-white);
   margin-bottom: 8px;
 }
 
@@ -571,12 +571,12 @@ body {
   right: 16px;
   width: 40px;
   height: 40px;
-  background: var(--zentrya-gold);
+  background: var(--Zentrya-gold);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--zentrya-white);
+  color: var(--Zentrya-white);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   z-index: 2;
 }
@@ -594,7 +594,7 @@ body {
   flex-direction: column;
   gap: 6px;
   padding-bottom: 16px;
-  border-bottom: 1px solid var(--zentrya-gray-200);
+  border-bottom: 1px solid var(--Zentrya-gray-200);
   font-size: 0.938rem;
 }
 
@@ -604,19 +604,19 @@ body {
 }
 
 .feature-label {
-  color: var(--zentrya-gray-500);
+  color: var(--Zentrya-gray-500);
   font-size: 0.875rem;
   font-weight: 400;
 }
 
 .feature-value {
-  color: var(--zentrya-black);
+  color: var(--Zentrya-black);
   font-weight: 600;
   font-size: 1rem;
 }
 
 .plan-feature.highlight .feature-value {
-  color: var(--zentrya-gold);
+  color: var(--Zentrya-gold);
   font-weight: 700;
 }
 
@@ -635,7 +635,7 @@ body {
   display: block;
   font-size: 1rem;
   font-weight: 600;
-  color: var(--zentrya-black);
+  color: var(--Zentrya-black);
   margin-bottom: 16px;
 }
 
@@ -656,13 +656,13 @@ body {
 }
 
 .avatar-option:hover {
-  border-color: var(--zentrya-gray-300);
+  border-color: var(--Zentrya-gray-300);
   transform: scale(1.05);
 }
 
 .avatar-option.selected {
-  border-color: var(--zentrya-gold);
-  box-shadow: 0 0 0 1px var(--zentrya-gold);
+  border-color: var(--Zentrya-gold);
+  box-shadow: 0 0 0 1px var(--Zentrya-gold);
 }
 
 .avatar-option img {
@@ -677,20 +677,20 @@ body {
   right: 4px;
   width: 24px;
   height: 24px;
-  background: var(--zentrya-gold);
+  background: var(--Zentrya-gold);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--zentrya-white);
+  color: var(--Zentrya-white);
 }
 
 /* ===========================
    ACCOUNT SUMMARY
    =========================== */
 .account-summary {
-  background: var(--zentrya-gray-50);
-  border: 1px solid var(--zentrya-gray-200);
+  background: var(--Zentrya-gray-50);
+  border: 1px solid var(--Zentrya-gray-200);
   border-radius: 8px;
   padding: 20px;
   margin-bottom: 24px;
@@ -705,16 +705,16 @@ body {
 }
 
 .summary-item:not(:last-child) {
-  border-bottom: 1px solid var(--zentrya-gray-200);
+  border-bottom: 1px solid var(--Zentrya-gray-200);
 }
 
 .summary-label {
-  color: var(--zentrya-gray-600);
+  color: var(--Zentrya-gray-600);
   font-weight: 500;
 }
 
 .summary-value {
-  color: var(--zentrya-black);
+  color: var(--Zentrya-black);
   font-weight: 600;
   text-align: right;
 }
@@ -724,7 +724,7 @@ body {
    =========================== */
 .terms-text {
   text-align: center;
-  color: var(--zentrya-gray-500);
+  color: var(--Zentrya-gray-500);
   font-size: 0.875rem;
   line-height: 1.4;
   margin-top: 16px;
@@ -734,8 +734,8 @@ body {
    FOOTER
    =========================== */
 .signup-footer {
-  background: var(--zentrya-gray-50);
-  border-top: 1px solid var(--zentrya-gray-200);
+  background: var(--Zentrya-gray-50);
+  border-top: 1px solid var(--Zentrya-gray-200);
   padding: 40px 20px;
   margin-top: auto;
 }
@@ -746,19 +746,19 @@ body {
 }
 
 .footer-contact {
-  color: var(--zentrya-gray-600);
+  color: var(--Zentrya-gray-600);
   font-size: 1rem;
   margin-bottom: 24px;
 }
 
 .footer-contact a {
-  color: var(--zentrya-gray-800);
+  color: var(--Zentrya-gray-800);
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .footer-contact a:hover {
-  color: var(--zentrya-black);
+  color: var(--Zentrya-black);
   text-decoration: underline;
 }
 
@@ -769,14 +769,14 @@ body {
 }
 
 .footer-links a {
-  color: var(--zentrya-gray-600);
+  color: var(--Zentrya-gray-600);
   text-decoration: none;
   font-size: 0.875rem;
   transition: color 0.2s ease;
 }
 
 .footer-links a:hover {
-  color: var(--zentrya-black);
+  color: var(--Zentrya-black);
   text-decoration: underline;
 }
 
@@ -922,16 +922,16 @@ body {
    =========================== */
 button:focus-visible,
 input:focus-visible {
-  outline: 2px solid var(--zentrya-gold);
+  outline: 2px solid var(--Zentrya-gold);
   outline-offset: 2px;
 }
 
 ::selection {
-  background: var(--zentrya-gold);
-  color: var(--zentrya-white);
+  background: var(--Zentrya-gold);
+  color: var(--Zentrya-white);
 }
 
 ::-moz-selection {
-  background: var(--zentrya-gold);
-  color: var(--zentrya-white);
+  background: var(--Zentrya-gold);
+  color: var(--Zentrya-white);
 }

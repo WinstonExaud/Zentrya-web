@@ -448,7 +448,7 @@ const SignUp = () => {
         throw new Error('Signup failed - no token received');
       }
       
-      toast.success(`Welcome to ZENTRYA, ${formData.displayName}! 🎉`);
+      toast.success(`Welcome to Zentrya Tv, ${formData.displayName}! 🎉`);
       
       try {
         await login(formData.phone, formData.password);
@@ -459,7 +459,7 @@ const SignUp = () => {
       setTimeout(() => {
         navigate('/browse', { 
           state: { 
-            welcomeMessage: `Welcome to ZENTRYA, ${formData.displayName}! 🎉`,
+            welcomeMessage: `Welcome to Zentrya Tv, ${formData.displayName}! 🎉`,
             newUser: true 
           } 
         });

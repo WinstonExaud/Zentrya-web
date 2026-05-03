@@ -1,5 +1,5 @@
 // src/components/HelpCenter.jsx
-// Help Center page for Zentrya - FAQ only version
+// Help Center page for Zentrya Tv - FAQ only version
 
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
@@ -22,32 +22,32 @@ export default function HelpCenter() {
   const faqs = [
     // GETTING STARTED
     {
-      question: "How do I sign up for Zentrya?",
-      answer: "Download the Zentrya mobile app from Google Play Store (Android) or join the iOS waitlist. Create an account with your phone number, choose a subscription plan, and start watching. You'll get a 30-day free trial for new accounts."
+      question: "How do I sign up for Zentrya Tv?",
+      answer: "Download the Zentrya Tv mobile app from Google Play Store (Android) or join the iOS waitlist. Create an account with your phone number, choose a subscription plan, and start watching. You'll get a 30-day free trial for new accounts."
     },
     {
-      question: "What content is available on Zentrya?",
-      answer: "Zentrya offers a vast library of Tanzanian and East African movies, TV shows, documentaries, and original content. We feature Bongo Movies, local series, international content, and exclusive Zentrya Originals. New content is added weekly."
+      question: "What content is available on Zentrya Tv?",
+      answer: "Zentrya Tv offers a vast library of Tanzanian and East African movies, TV shows, documentaries, and original content. We feature Bongo Movies, local series, international content, and exclusive Zentrya Tv Originals. New content is added weekly."
     },
     {
-      question: "Can I watch Zentrya on my computer or laptop?",
-      answer: "Web streaming is not available yet. Currently, Zentrya is only available on mobile devices through our Android app. Download the app to start streaming. Web streaming is coming soon!"
+      question: "Can I watch Zentrya Tv on my computer or laptop?",
+      answer: "Web streaming is not available yet. Currently, Zentrya Tv is only available on mobile devices through our Android app. Download the app to start streaming. Web streaming is coming soon!"
     },
     {
       question: "Is there a free trial available?",
       answer: "Yes! New users get a 30-day free trial with full access to all content. No payment required until the trial ends. You can cancel anytime during the trial period without being charged."
     },
     {
-      question: "What languages are available on Zentrya?",
-      answer: "Zentrya supports Swahili and English interfaces. Content includes movies and shows in Swahili, English, and other African languages with subtitle options available for most titles."
+      question: "What languages are available on Zentrya Tv?",
+      answer: "Zentrya Tv supports Swahili and English interfaces. Content includes movies and shows in Swahili, English, and other African languages with subtitle options available for most titles."
     },
     {
       question: "Can I watch with my family?",
       answer: "Yes! Create up to 5 profiles per account. Each family member gets personalized recommendations. Kids profiles are available with age-appropriate content filtering."
     },
     {
-      question: "What are Zentrya Originals?",
-      answer: "Zentrya Originals are exclusive movies and series produced or commissioned by Zentrya. These include Tanzanian and East African stories you won't find anywhere else. New Originals premiere monthly."
+      question: "What are Zentrya Tv Originals?",
+      answer: "Zentrya Tv Originals are exclusive movies and series produced or commissioned by Zentrya Tv. These include Tanzanian and East African stories you won't find anywhere else. New Originals premiere monthly."
     },
     {
       question: "How often is new content added?",
@@ -74,8 +74,8 @@ export default function HelpCenter() {
 
     // DEVICES & APPS
     {
-      question: "What devices support Zentrya?",
-      answer: "Currently, Zentrya is available on Android phones and tablets (7.0+). iOS app coming soon - join the waitlist! Web streaming is not available yet but coming soon."
+      question: "What devices support Zentrya Tv?",
+      answer: "Currently, Zentrya Tv is available on Android phones and tablets (7.0+). iOS app coming soon - join the waitlist! Web streaming is not available yet but coming soon."
     },
     {
       question: "How many devices can I use simultaneously?",
@@ -83,14 +83,14 @@ export default function HelpCenter() {
     },
     {
       question: "How do I download the mobile app?",
-      answer: "Android: Open Google Play Store, search 'Zentrya', tap Install. iOS: Join our waitlist at zentrya.com/waitlist to be notified when available. Minimum Android version: 7.0."
+      answer: "Android: Open Google Play Store, search 'Zentrya Tv', tap Install. iOS: Join our waitlist at Zentrya Tv.com/waitlist to be notified when available. Minimum Android version: 7.0."
     },
     {
       question: "What internet speed do I need?",
       answer: "Minimum speeds: SD (480p): 3 Mbps, HD (720p): 5 Mbps, Full HD (1080p): 10 Mbps, 4K Ultra HD: 25 Mbps. WiFi or mobile data connection required."
     },
     {
-      question: "Can I use Zentrya offline?",
+      question: "Can I use Zentrya Tv offline?",
       answer: "Yes, with downloads! Download movies/episodes on mobile (Standard/Premium plans only). Once downloaded, watch anytime without internet. Downloads available for 30 days or 48 hours after starting playback."
     },
 
@@ -127,7 +127,7 @@ export default function HelpCenter() {
     },
     {
       question: "Where are my downloads saved?",
-      answer: "Downloads are stored in the Zentrya app's secure storage. They're encrypted and can't be accessed by other apps or file managers. Access via app's Downloads section."
+      answer: "Downloads are stored in the Zentrya Tv app's secure storage. They're encrypted and can't be accessed by other apps or file managers. Access via app's Downloads section."
     },
     {
       question: "Why can't I download certain titles?",
@@ -149,7 +149,7 @@ export default function HelpCenter() {
     },
     {
       question: "What should I do if my account is hacked?",
-      answer: "If compromised: 1) Reset password immediately 2) Sign out all devices (Settings > Manage Devices > Sign Out All) 3) Contact support@zentrya.com 4) Check billing for unauthorized charges."
+      answer: "If compromised: 1) Reset password immediately 2) Sign out all devices (Settings > Manage Devices > Sign Out All) 3) Contact support@Zentrya Tv.com 4) Check billing for unauthorized charges."
     },
 
     // TROUBLESHOOTING
@@ -159,7 +159,7 @@ export default function HelpCenter() {
     },
     {
       question: "App keeps crashing on mobile",
-      answer: "To fix crashes: 1) Update app from Play Store 2) Restart phone 3) Clear app cache (Settings > Apps > Zentrya > Clear Cache) 4) Free up storage space (need 1GB+ free) 5) Reinstall app."
+      answer: "To fix crashes: 1) Update app from Play Store 2) Restart phone 3) Clear app cache (Settings > Apps > Zentrya Tv > Clear Cache) 4) Free up storage space (need 1GB+ free) 5) Reinstall app."
     },
     {
       question: "Can't sign in - 'Incorrect password' error",
@@ -175,7 +175,7 @@ export default function HelpCenter() {
     },
     {
       question: "My List items disappeared",
-      answer: "Missing My List: 1) Check correct profile is selected 2) Scroll down (items may have moved) 3) Verify item wasn't removed from Zentrya 4) Restart app 5) Contact support if issue persists."
+      answer: "Missing My List: 1) Check correct profile is selected 2) Scroll down (items may have moved) 3) Verify item wasn't removed from Zentrya Tv 4) Restart app 5) Contact support if issue persists."
     }
   ];
 
@@ -189,6 +189,7 @@ export default function HelpCenter() {
           <div className="text-2xl md:text-3xl font-bold tracking-wider">
             <span className="text-yellow-500">ZEN</span>
             <span className="text-white">TRYA</span>
+            <span className="text-yellow-500"> TV</span>
           </div>
         </Link>
 
@@ -215,7 +216,7 @@ export default function HelpCenter() {
         <div className="absolute inset-0">
           <img 
             src={aboutBg} 
-            alt="Zentrya streaming platform" 
+            alt="Zentrya Tv streaming platform" 
             className="w-full h-full object-cover"
           />
           {/* Multi-layer gradient overlay for depth */}
@@ -246,7 +247,7 @@ export default function HelpCenter() {
           </h1>
 
           <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Find answers to common questions about Zentrya
+            Find answers to common questions about Zentrya Tv
           </p>
         </div>
       </section>
@@ -311,7 +312,8 @@ export default function HelpCenter() {
           <div className="mb-12">
             <div className="text-3xl font-bold mb-3">
               <span className="text-yellow-500">ZEN</span>
-              <span className="text-white">TRYA</span>
+              <span className="text-white">TRYA</span>       
+              <span className="text-yellow-500"> TV</span>
             </div>
             <p className="text-gray-400">The Future of Entertainment in Tanzania 🇹🇿</p>
           </div>
@@ -411,20 +413,20 @@ export default function HelpCenter() {
           <div className="pt-8 border-t border-gray-900">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <p className="text-gray-500 text-sm">
-                &copy; 2026 Zentrya. All rights reserved.
+                &copy; 2026 Zentrya Tv. All rights reserved.
               </p>
               <div className="flex items-center gap-6">
-                <a href="https://www.facebook.com/zentrya" className="text-gray-500 hover:text-yellow-500 transition-colors">
+                <a href="https://www.facebook.com/Zentrya Tv" className="text-gray-500 hover:text-yellow-500 transition-colors">
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                   </svg>
                 </a>
-                <a href="https://twitter.com/zentrya" className="text-gray-500 hover:text-yellow-500 transition-colors">
+                <a href="https://twitter.com/Zentrya Tv" className="text-gray-500 hover:text-yellow-500 transition-colors">
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
                   </svg>
                 </a>
-                <a href="https://www.instagram.com/zentrya_" className="text-gray-500 hover:text-yellow-500 transition-colors">
+                <a href="https://www.instagram.com/zentryatv" className="text-gray-500 hover:text-yellow-500 transition-colors">
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
                   </svg>

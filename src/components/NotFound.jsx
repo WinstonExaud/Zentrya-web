@@ -1,5 +1,5 @@
 // src/components/NotFound.jsx
-// 404 Page Not Found for Zentrya - Creative error page with helpful navigation
+// 404 Page Not Found for Zentrya Tv - Creative error page with helpful navigation
 
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
@@ -94,6 +94,7 @@ export default function NotFound() {
           <div className="text-2xl md:text-3xl font-bold tracking-wider">
             <span className="text-yellow-500">ZEN</span>
             <span className="text-white">TRYA</span>
+            <span className="text-yellow-500"> TV</span>
           </div>
         </Link>
 
@@ -121,7 +122,7 @@ export default function NotFound() {
         <div className="absolute inset-0">
           <img 
             src={aboutBg} 
-            alt="Zentrya streaming platform" 
+            alt="Zentrya Tv streaming platform" 
             className="w-full h-full object-cover"
           />
           {/* Multi-layer gradient overlay for depth */}
@@ -260,7 +261,7 @@ export default function NotFound() {
 
           <div className="pt-8 border-t border-gray-900 text-center">
             <p className="text-gray-500 text-sm">
-              &copy; 2026 Zentrya. All rights reserved.
+              &copy; 2026 Zentrya Tv. All rights reserved.
             </p>
           </div>
         </div>

@@ -1,5 +1,5 @@
 // src/components/Press.jsx
-// Press & Media page for Zentrya - Press releases, media kit, news coverage
+// Press & Media page for Zentrya Tv - Press releases, media kit, news coverage
 
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
@@ -56,7 +56,7 @@ export default function Press() {
     {
       id: 1,
       category: "launch",
-      title: "Zentrya Launches Tanzania's Premier Streaming Platform",
+      title: "Zentrya Tv Launches Tanzania's Premier Streaming Platform",
       date: "December 1, 2024",
       excerpt: "Revolutionary streaming service brings world-class entertainment to Tanzanian audiences with focus on local content and affordable access.",
       image: null,
@@ -65,7 +65,7 @@ export default function Press() {
     {
       id: 2,
       category: "product",
-      title: "Zentrya Introduces Mobile Apps for iOS and Android",
+      title: "Zentrya Tv Introduces Mobile Apps for iOS and Android",
       date: "January 15, 2025",
       excerpt: "New mobile applications make streaming accessible across Tanzania with optimized data usage and offline download capabilities.",
       image: null,
@@ -74,7 +74,7 @@ export default function Press() {
     {
       id: 3,
       category: "partnership",
-      title: "Zentrya Partners with Leading African Content Creators",
+      title: "Zentrya Tv Partners with Leading African Content Creators",
       date: "November 20, 2024",
       excerpt: "Strategic partnerships announced to bring exclusive African cinema and original content to the platform.",
       image: null,
@@ -83,7 +83,7 @@ export default function Press() {
     {
       id: 4,
       category: "expansion",
-      title: "Zentrya Announces Regional Expansion Plans for East Africa",
+      title: "Zentrya Tv Announces Regional Expansion Plans for East Africa",
       date: "October 10, 2024",
       excerpt: "Platform set to expand across Kenya, Uganda, and Rwanda in 2025, bringing Tanzanian innovation to the region.",
       image: null,
@@ -92,7 +92,7 @@ export default function Press() {
     {
       id: 5,
       category: "milestone",
-      title: "Zentrya Reaches 50,000 Active Users in First Quarter",
+      title: "Zentrya Tv Reaches 50,000 Active Users in First Quarter",
       date: "September 5, 2024",
       excerpt: "Rapid growth demonstrates strong demand for locally-focused streaming services in Tanzania.",
       image: null,
@@ -101,7 +101,7 @@ export default function Press() {
     {
       id: 6,
       category: "product",
-      title: "Zentrya Launches Family Profiles and Parental Controls",
+      title: "Zentrya Tv Launches Family Profiles and Parental Controls",
       date: "August 15, 2024",
       excerpt: "New features enable safer viewing for children with customizable content restrictions and individual family profiles.",
       image: null,
@@ -112,7 +112,7 @@ export default function Press() {
   const mediaKitItems = [
     {
       title: "Company Logo Pack",
-      description: "Zentrya logos in various formats (PNG, SVG, EPS)",
+      description: "Zentrya Tv logos in various formats (PNG, SVG, EPS)",
       icon: ImageIcon,
       size: "2.5 MB",
       type: "ZIP"
@@ -157,28 +157,28 @@ export default function Press() {
   const mediaCoverage = [
     {
       outlet: "The Citizen Tanzania",
-      title: "Zentrya: The Tanzanian Startup Revolutionizing Entertainment",
+      title: "Zentrya Tv: The Tanzanian Startup Revolutionizing Entertainment",
       date: "November 25, 2024",
       link: "#",
       logo: null
     },
     {
       outlet: "Daily News Tanzania",
-      title: "Local Streaming Platform Zentrya Challenges Global Giants",
+      title: "Local Streaming Platform Zentrya Tv Challenges Global Giants",
       date: "October 18, 2024",
       link: "#",
       logo: null
     },
     {
       outlet: "TechCrunch Africa",
-      title: "Tanzania's Zentrya Raises Interest in Local Streaming Market",
+      title: "Tanzania's Zentrya Tv Raises Interest in Local Streaming Market",
       date: "September 30, 2024",
       link: "#",
       logo: null
     },
     {
       outlet: "East African Business",
-      title: "How Zentrya is Building the Netflix of East Africa",
+      title: "How Zentrya Tv is Building the Netflix of East Africa",
       date: "August 22, 2024",
       link: "#",
       logo: null
@@ -236,6 +236,7 @@ export default function Press() {
           <div className="text-2xl md:text-3xl font-bold tracking-wider">
             <span className="text-yellow-500">ZEN</span>
             <span className="text-white">TRYA</span>
+            <span className="text-yellow-500"> TV</span>
           </div>
         </Link>
 
@@ -274,7 +275,7 @@ export default function Press() {
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
             <span className="bg-gradient-to-r from-white via-yellow-100 to-yellow-500 bg-clip-text text-transparent">
-              Zentrya in the
+              Zentrya Tv in the
             </span>
             <br />
             <span className="text-white">News</span>
@@ -494,7 +495,7 @@ export default function Press() {
               Media <span className="text-yellow-500">Coverage</span>
             </h2>
             <p className="text-gray-400 text-lg">
-              What the press is saying about Zentrya
+              What the press is saying about Zentrya Tv
             </p>
           </div>
 
@@ -581,8 +582,8 @@ export default function Press() {
                   </div>
                   <div>
                     <h3 className="font-bold text-white mb-1">Email</h3>
-                    <a href="mailto:press@zentrya.com" className="text-yellow-500 hover:text-yellow-400 transition-colors">
-                      press@zentrya.com
+                    <a href="mailto:press@Zentrya Tv.com" className="text-yellow-500 hover:text-yellow-400 transition-colors">
+                      press@Zentrya Tv.com
                     </a>
                   </div>
                 </div>
@@ -722,7 +723,8 @@ export default function Press() {
           <div className="mb-12">
             <div className="text-3xl font-bold mb-3">
               <span className="text-yellow-500">ZEN</span>
-              <span className="text-white">TRYA</span>
+              <span className="text-white">TRYA</span>       
+              <span className="text-yellow-500"> TV</span>
             </div>
             <p className="text-gray-400">The Future of Entertainment in Tanzania 🇹🇿</p>
           </div>
@@ -822,7 +824,7 @@ export default function Press() {
           <div className="pt-8 border-t border-gray-900">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <p className="text-gray-500 text-sm">
-                &copy; 2025 Zentrya. All rights reserved.
+                &copy; 2025 Zentrya Tv. All rights reserved.
               </p>
               <div className="flex items-center gap-6">
                 <a href="#" className="text-gray-500 hover:text-yellow-500 transition-colors">

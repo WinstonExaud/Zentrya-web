@@ -1,5 +1,5 @@
 // src/components/Devices.jsx
-// Supported Devices page for Zentrya
+// Supported Devices page for Zentrya Tv
 
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
@@ -118,7 +118,7 @@ export default function Devices() {
       description: "Chrome, Firefox, Safari, Edge",
       features: ["HD Streaming", "All Browsers Supported", "No Download Required"],
       supported: true,
-      downloadLink: "https://zentrya.com"
+      downloadLink: "https://Zentrya Tv.com"
     },
     {
       category: "computer",
@@ -198,9 +198,9 @@ export default function Devices() {
       device: "Smart TV",
       steps: [
         "Navigate to your TV's app store",
-        "Search for 'Zentrya'",
+        "Search for 'Zentrya Tv'",
         "Download and install the app",
-        "Open Zentrya and sign in",
+        "Open Zentrya Tv and sign in",
         "Start streaming!"
       ]
     },
@@ -208,7 +208,7 @@ export default function Devices() {
       device: "Mobile Phone",
       steps: [
         "Open Google Play Store or App Store",
-        "Search for 'Zentrya'",
+        "Search for 'Zentrya Tv'",
         "Tap 'Install' or 'Get'",
         "Open the app and sign in",
         "Enjoy unlimited streaming!"
@@ -218,7 +218,7 @@ export default function Devices() {
       device: "Web Browser",
       steps: [
         "Open your web browser",
-        "Visit zentrya.com",
+        "Visit Zentrya Tv.com",
         "Click 'Sign In'",
         "Enter your credentials",
         "Start watching immediately!"
@@ -227,7 +227,7 @@ export default function Devices() {
     {
       device: "Chromecast",
       steps: [
-        "Open Zentrya app on your phone",
+        "Open Zentrya Tv app on your phone",
         "Tap the Cast icon",
         "Select your Chromecast device",
         "Choose content to watch",
@@ -273,6 +273,7 @@ export default function Devices() {
           <div className="text-2xl md:text-3xl font-bold tracking-wider">
             <span className="text-yellow-500">ZEN</span>
             <span className="text-white">TRYA</span>
+            <span className="text-yellow-500"> TV</span>
           </div>
         </Link>
 
@@ -318,7 +319,7 @@ export default function Devices() {
           </h1>
 
           <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Stream Zentrya on your phone, tablet, computer, smart TV, and gaming consoles. 
+            Stream Zentrya Tv on your phone, tablet, computer, smart TV, and gaming consoles. 
             Unlimited entertainment on all your favorite devices.
           </p>
 
@@ -570,14 +571,14 @@ export default function Devices() {
 
             <details className="bg-gradient-to-r from-black to-gray-800 rounded-lg overflow-hidden border border-gray-700 hover:border-yellow-500/30 transition-all group">
               <summary className="px-6 py-4 cursor-pointer flex items-center justify-between text-lg font-bold">
-                <span className="text-white">Can't find Zentrya app on my device</span>
+                <span className="text-white">Can't find Zentrya Tv app on my device</span>
                 <span className="text-3xl text-yellow-500 group-open:rotate-45 transition-transform duration-300">+</span>
               </summary>
               <div className="px-6 pb-4 text-gray-300">
                 <ul className="list-disc list-inside space-y-2">
                   <li>Ensure your device meets minimum requirements</li>
-                  <li>Check if Zentrya is available in your region's app store</li>
-                  <li>Try streaming via web browser at zentrya.com</li>
+                  <li>Check if Zentrya Tv is available in your region's app store</li>
+                  <li>Try streaming via web browser at Zentrya Tv.com</li>
                   <li>Contact support for device-specific help</li>
                 </ul>
               </div>
@@ -590,7 +591,7 @@ export default function Devices() {
               </summary>
               <div className="px-6 pb-4 text-gray-300">
                 <ul className="list-disc list-inside space-y-2">
-                  <li>Open the Zentrya mobile app (downloads only available on mobile)</li>
+                  <li>Open the Zentrya Tv mobile app (downloads only available on mobile)</li>
                   <li>Find the content you want to download</li>
                   <li>Tap the download icon</li>
                   <li>Access downloads from the "My Downloads" section</li>
@@ -607,7 +608,7 @@ export default function Devices() {
                 <ul className="list-disc list-inside space-y-2">
                   <li>Ensure your device and TV are on the same WiFi network</li>
                   <li>Restart both your device and TV</li>
-                  <li>Update the Zentrya app to the latest version</li>
+                  <li>Update the Zentrya Tv app to the latest version</li>
                   <li>Check Chromecast/AirPlay is enabled on your TV</li>
                 </ul>
               </div>
@@ -634,7 +635,7 @@ export default function Devices() {
             Ready to Start <span className="text-yellow-500">Streaming?</span>
           </h2>
           <p className="text-lg text-gray-300 mb-8">
-            Join Zentrya today and watch on all your devices
+            Join Zentrya Tv today and watch on all your devices
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -661,7 +662,8 @@ export default function Devices() {
           <div className="mb-12">
             <div className="text-3xl font-bold mb-3">
               <span className="text-yellow-500">ZEN</span>
-              <span className="text-white">TRYA</span>
+              <span className="text-white">TRYA</span>       
+              <span className="text-yellow-500"> TV</span>
             </div>
             <p className="text-gray-400">The Future of Entertainment in Tanzania 🇹🇿</p>
           </div>
@@ -754,7 +756,7 @@ export default function Devices() {
 
           <div className="pt-8 border-t border-gray-900">
             <p className="text-gray-500 text-sm text-center">
-              &copy; 2025 Zentrya. All rights reserved.
+              &copy; 2025 Zentrya Tv. All rights reserved.
             </p>
           </div>
         </div>

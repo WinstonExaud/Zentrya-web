@@ -1,5 +1,5 @@
 // src/components/Waitlist.jsx
-// iOS Waitlist signup page for Zentrya
+// iOS Waitlist signup page for Zentrya Tv
 
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -119,7 +119,7 @@ export default function Waitlist() {
               Join iOS Waitlist
             </h1>
             <p className="text-gray-600 text-lg">
-              Be the first to know when Zentrya launches on the App Store
+              Be the first to know when Zentrya tv launches on the App Store
             </p>
           </div>
 
@@ -183,7 +183,7 @@ export default function Waitlist() {
                   </div>
                   <div>
                     <p className="font-medium text-gray-900 mb-1">What happens next?</p>
-                    <p>We'll send you an SMS notification as soon as Zentrya is available on the App Store. You'll be among the first to download it!</p>
+                    <p>We'll send you an SMS notification as soon as Zentrya tv is available on the App Store. You'll be among the first to download it!</p>
                   </div>
                 </div>
               </div>
@@ -252,7 +252,7 @@ export default function Waitlist() {
 
             {/* Copyright */}
             <p className="text-gray-500 text-sm">
-              © 2026 Zentrya. All rights reserved.
+              © 2026 Zentrya Tv. All rights reserved.
             </p>
           </div>
         </div>

@@ -1,5 +1,5 @@
 // src/components/RefundPolicy.jsx
-// Refund Policy page for Zentrya
+// Refund Policy page for Zentrya Tv
 
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
@@ -27,6 +27,7 @@ export default function RefundPolicy() {
           <div className="text-2xl md:text-3xl font-bold tracking-wider">
             <span className="text-yellow-500">ZEN</span>
             <span className="text-white">TRYA</span>
+            <span className="text-yellow-500"> TV</span>
           </div>
         </Link>
 
@@ -71,7 +72,7 @@ export default function RefundPolicy() {
               <div className="text-left">
                 <p className="text-white font-semibold mb-2">Transparent Billing</p>
                 <p className="text-gray-300 text-sm leading-relaxed">
-                  Understand our cancellation and refund policies before subscribing to Zentrya.
+                  Understand our cancellation and refund policies before subscribing to Zentrya Tv.
                 </p>
               </div>
             </div>
@@ -119,7 +120,7 @@ export default function RefundPolicy() {
           <div>
             <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">1. General Refund Policy</h2>
             <p className="text-gray-300 leading-relaxed mb-4">
-              All payments made to Zentrya are <strong>non-refundable</strong> except as expressly set forth in this policy or as required by applicable law.
+              All payments made to Zentrya Tv are <strong>non-refundable</strong> except as expressly set forth in this policy or as required by applicable law.
             </p>
             <p className="text-gray-300 leading-relaxed">
               We do not provide refunds or credits for partial subscription periods. If you cancel your subscription, you will continue to have access to the Service through the end of your current billing period.
@@ -130,7 +131,7 @@ export default function RefundPolicy() {
           <div className="bg-gradient-to-br from-gray-900 to-black p-8 rounded-xl border border-gray-800">
             <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">2. Billing Cycles</h2>
             <p className="text-gray-300 leading-relaxed mb-4">
-              Zentrya offers the following billing cycles:
+              Zentrya Tv offers the following billing cycles:
             </p>
             <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4 mb-4">
               <li><strong>Monthly:</strong> Billed every 30 days</li>
@@ -146,7 +147,7 @@ export default function RefundPolicy() {
           <div>
             <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">3. Cancellation Policy</h2>
             <p className="text-gray-300 leading-relaxed mb-4">
-              You may cancel your Zentrya subscription at any time through your account settings or by contacting customer support.
+              You may cancel your Zentrya Tv subscription at any time through your account settings or by contacting customer support.
             </p>
             
             <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-6 mb-4">
@@ -155,7 +156,7 @@ export default function RefundPolicy() {
                 How to Cancel:
               </h3>
               <ol className="list-decimal list-inside text-gray-300 space-y-2 ml-4">
-                <li>Log in to your Zentrya account</li>
+                <li>Log in to your Zentrya Tv account</li>
                 <li>Go to Account Settings</li>
                 <li>Navigate to Subscription</li>
                 <li>Click "Cancel Subscription"</li>
@@ -175,7 +176,7 @@ export default function RefundPolicy() {
           <div>
             <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">4. Free Trial Policy</h2>
             <p className="text-gray-300 leading-relaxed mb-4">
-              Zentrya may offer free trial periods to new subscribers from time to time. Free trial terms:
+              Zentrya Tv may offer free trial periods to new subscribers from time to time. Free trial terms:
             </p>
             <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4 mb-4">
               <li>Free trials are available to new subscribers only</li>
@@ -266,7 +267,7 @@ export default function RefundPolicy() {
           <div>
             <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">7. Disputed Charges</h2>
             <p className="text-gray-300 leading-relaxed mb-4">
-              If you believe you have been incorrectly charged, please contact us immediately at billing@zentrya.com or +255 123 456 789.
+              If you believe you have been incorrectly charged, please contact us immediately at billing@Zentrya Tv.com or +255 123 456 789.
             </p>
             <p className="text-gray-300 leading-relaxed mb-4">
               Please provide the following information:
@@ -314,8 +315,8 @@ export default function RefundPolicy() {
                   <DollarSign size={20} className="text-yellow-500" />
                   <div>
                     <p className="text-white font-semibold">Email:</p>
-                    <a href="mailto:billing@zentrya.com" className="text-yellow-500 hover:text-yellow-400">
-                      billing@zentrya.com
+                    <a href="mailto:billing@Zentrya Tv.com" className="text-yellow-500 hover:text-yellow-400">
+                      billing@Zentrya Tv.com
                     </a>
                   </div>
                 </div>
@@ -358,7 +359,7 @@ export default function RefundPolicy() {
                   Terms of Use
                 </h4>
                 <p className="text-gray-400 text-sm">
-                  Complete terms governing use of Zentrya
+                  Complete terms governing use of Zentrya Tv
                 </p>
               </Link>
 
@@ -385,7 +386,8 @@ export default function RefundPolicy() {
           <div className="mb-12">
             <div className="text-3xl font-bold mb-3">
               <span className="text-yellow-500">ZEN</span>
-              <span className="text-white">TRYA</span>
+              <span className="text-white">TRYA</span>       
+              <span className="text-yellow-500"> TV</span>
             </div>
             <p className="text-gray-400">The Future of Entertainment in Tanzania 🇹🇿</p>
           </div>
@@ -478,7 +480,7 @@ export default function RefundPolicy() {
 
           <div className="pt-8 border-t border-gray-900">
             <p className="text-gray-500 text-sm text-center">
-              &copy; 2026 Zentrya. All rights reserved.
+              &copy; 2026 Zentrya Tv. All rights reserved.
             </p>
           </div>
         </div>

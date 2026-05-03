@@ -107,12 +107,12 @@ function TitleUpdater() {
   
   useEffect(() => {
     const pageTitle = getPageTitle(location.pathname)
-    const baseTitle = 'Zentrya'
+    const baseTitle = 'Zentrya Tv'
     
     if (location.pathname === '/') {
-      document.title = 'Zentrya | Stream the best African movies, series, and originals'
+      document.title = 'Zentrya Tv | Stream the best African movies, series, and originals'
     } else if (location.pathname === '/coming-soon') {
-      document.title = 'Zentrya | Coming Soon'
+      document.title = 'Zentrya Tv | Coming Soon'
     } else {
       document.title = `${baseTitle} | ${pageTitle}`
     }

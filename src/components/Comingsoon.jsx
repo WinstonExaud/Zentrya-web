@@ -14,7 +14,8 @@ export default function Upcoming() {
           <Link to="/" className="flex items-center">
             <div className="text-2xl font-bold tracking-wider">
               <span className="text-yellow-500">ZEN</span>
-              <span className="text-white">TRYA</span>
+              <span className="text-white">TRYA</span>       
+              <span className="text-yellow-500"> TV</span>
             </div>
           </Link>
 
@@ -95,7 +96,8 @@ export default function Upcoming() {
             {/* Logo */}
             <div className="text-xl font-bold tracking-wider">
               <span className="text-yellow-500">ZEN</span>
-              <span className="text-white">TRYA</span>
+              <span className="text-white">TRYA</span>       
+              <span className="text-yellow-500"> TV</span>
             </div>
 
             {/* Links */}
@@ -119,7 +121,7 @@ export default function Upcoming() {
 
             {/* Copyright */}
             <p className="text-gray-500 text-sm">
-              © 2026 Zentrya. All rights reserved.
+              © 2026 Zentrya Tv. All rights reserved.
             </p>
           </div>
         </div>

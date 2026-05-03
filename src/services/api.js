@@ -47,7 +47,7 @@ class ApiService {
   // 🔑 Token Management
   loadToken() {
     try {
-      const savedToken = localStorage.getItem('zentrya_token');
+      const savedToken = localStorage.getItem('zentryatvtoken');
       this.token = savedToken;
       
       if (savedToken) {
@@ -62,7 +62,7 @@ class ApiService {
     this.token = token;
     
     if (token) {
-      localStorage.setItem('zentrya_token', token);
+      localStorage.setItem('zentryatvtoken', token);
       console.log('✅ Token saved');
     } else {
       await this.clearToken();
@@ -71,9 +71,9 @@ class ApiService {
 
   async clearToken() {
     this.token = null;
-    localStorage.removeItem('zentrya_token');
-    localStorage.removeItem('zentrya_user');
-    localStorage.removeItem('zentrya_user_type');
+    localStorage.removeItem('zentryatvtoken');
+    localStorage.removeItem('zentryatvuser');
+    localStorage.removeItem('zentryatvuser_type');
     console.log('🗑️ Token cleared');
   }
 

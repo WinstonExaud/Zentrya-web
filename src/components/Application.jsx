@@ -1,5 +1,5 @@
 // src/components/Application.jsx
-// Minimalist app download page for Zentrya
+// Minimalist app download page for Zentrya Tv
 
 import { Link } from "react-router-dom";
 
@@ -42,7 +42,7 @@ export default function Application() {
                 {/* Placeholder for app screenshot/preview image */}
                 <img 
                   src="/app-preview.jpeg" 
-                  alt="Zentrya App Preview"
+                  alt="Zentrya Tv App Preview"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -56,7 +56,7 @@ export default function Application() {
                   {/* Placeholder for app icon */}
                   <img 
                     src="/Z.png" 
-                    alt="Zentrya Icon"
+                    alt="Zentrya Tv Icon"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -64,7 +64,7 @@ export default function Application() {
 
               {/* App Name */}
               <h1 className="text-4xl md:text-5xl font-bold mb-3 text-black">
-                ZENTRYA
+                Zentrya tv
               </h1>
               
               {/* Subtitle */}
@@ -88,7 +88,7 @@ export default function Application() {
 
                 {/* Google Play Badge */}
                 <a
-                  href="https://play.google.com/store/apps/details?id=com.zentrya.app"
+                  href="https://play.google.com/store/apps/details?id=com.Zentrya Tv.app"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block hover:opacity-80 transition-opacity"
@@ -108,7 +108,7 @@ export default function Application() {
                   <p>** Your World of African Stories **</p>
                   <p>** Made for Tanzanians **</p>
                   <p className="pt-4">
-                    Experience premium entertainment with Zentrya. Stream exclusive content, 
+                    Experience premium entertainment with Zentrya tv.. Stream exclusive content, 
                     live events, and Tanzanian originals. Available on Android now, iOS coming soon.
                   </p>
                   <Link 
@@ -155,7 +155,7 @@ export default function Application() {
 
             {/* Copyright */}
             <p className="text-gray-500 text-sm">
-              © 2026 Zentrya. All rights reserved.
+              © 2026 Zentrya Tv. All rights reserved.
             </p>
           </div>
         </div>

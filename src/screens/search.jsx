@@ -75,7 +75,7 @@ const Search = () => {
   // Load recent searches from localStorage
   const loadRecentSearches = () => {
     try {
-      const saved = localStorage.getItem('zentrya_recent_searches');
+      const saved = localStorage.getItem('zentryatvrecent_searches');
       if (saved) {
         setRecentSearches(JSON.parse(saved));
       }
@@ -101,7 +101,7 @@ const Search = () => {
       searches = searches.slice(0, 10);
       
       setRecentSearches(searches);
-      localStorage.setItem('zentrya_recent_searches', JSON.stringify(searches));
+      localStorage.setItem('zentryatvrecent_searches', JSON.stringify(searches));
     } catch (error) {
       console.error('Error saving recent search:', error);
     }
@@ -110,7 +110,7 @@ const Search = () => {
   // Clear recent searches
   const clearRecentSearches = () => {
     setRecentSearches([]);
-    localStorage.removeItem('zentrya_recent_searches');
+    localStorage.removeItem('zentryatvrecent_searches');
   };
 
   // Load my list

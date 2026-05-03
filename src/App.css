@@ -1,4 +1,4 @@
-/* 🎨 Zentrya Gold Theme Variables */
+/* 🎨 Zentrya Tv Gold Theme Variables */
 :root {
   --background: #000000;
   --foreground: #ffffff;
@@ -55,7 +55,7 @@
   }
 }
 
-/* ✨ Zentrya Gold Utilities */
+/* ✨ Zentrya Tv Gold Utilities */
 .text-gold {
   color: var(--gold);
 }

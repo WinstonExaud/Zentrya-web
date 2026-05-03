@@ -19,8 +19,8 @@ export const AuthProvider = ({ children }) => {
         setLoading(true);
         
         // Try to restore session from storage
-        const savedToken = localStorage.getItem('zentrya_token');
-        const savedUser = localStorage.getItem('zentrya_user');
+        const savedToken = localStorage.getItem('zentryatvtoken');
+        const savedUser = localStorage.getItem('zentryatvuser');
 
         console.log('🔍 Checking persisted session...');
         console.log('Token exists:', !!savedToken);
@@ -45,10 +45,10 @@ export const AuthProvider = ({ children }) => {
               console.warn('⚠️ Token might be expired, clearing session...', apiError);
               
               // Token invalid - clear session
-              localStorage.removeItem('zentrya_token');
-              localStorage.removeItem('zentrya_user');
-              localStorage.removeItem('zentrya_user_type');
-              localStorage.removeItem('zentrya_current_profile');
+              localStorage.removeItem('zentryatvtoken');
+              localStorage.removeItem('zentryatvuser');
+              localStorage.removeItem('zentryatvuser_type');
+              localStorage.removeItem('zentryatvcurrent_profile');
               apiService.setToken(null);
               setToken(null);
               setUser(null);
@@ -56,10 +56,10 @@ export const AuthProvider = ({ children }) => {
           } catch (e) {
             console.warn('⚠️ Failed to parse saved data:', e);
             // Clear invalid data
-            localStorage.removeItem('zentrya_token');
-            localStorage.removeItem('zentrya_user');
-            localStorage.removeItem('zentrya_user_type');
-            localStorage.removeItem('zentrya_current_profile');
+            localStorage.removeItem('zentryatvtoken');
+            localStorage.removeItem('zentryatvuser');
+            localStorage.removeItem('zentryatvuser_type');
+            localStorage.removeItem('zentryatvcurrent_profile');
           }
         } else {
           console.log('ℹ️ No persisted session found');
@@ -85,9 +85,9 @@ export const AuthProvider = ({ children }) => {
       const response = await apiService.login(emailOrPhone, password);
 
       // Save token and user
-      localStorage.setItem('zentrya_token', response.access_token);
-      localStorage.setItem('zentrya_user', JSON.stringify(response.user));
-      localStorage.setItem('zentrya_user_type', response.user.role || 'client');
+      localStorage.setItem('zentryatvtoken', response.access_token);
+      localStorage.setItem('zentryatvuser', JSON.stringify(response.user));
+      localStorage.setItem('zentryatvuser_type', response.user.role || 'client');
 
       // Set token in API service
       apiService.setToken(response.access_token);
@@ -127,9 +127,9 @@ export const AuthProvider = ({ children }) => {
       const response = await apiService.signUp(signUpData);
 
       // Save token and user
-      localStorage.setItem('zentrya_token', response.access_token);
-      localStorage.setItem('zentrya_user', JSON.stringify(response.user));
-      localStorage.setItem('zentrya_user_type', response.user.role || 'client');
+      localStorage.setItem('zentryatvtoken', response.access_token);
+      localStorage.setItem('zentryatvuser', JSON.stringify(response.user));
+      localStorage.setItem('zentryatvuser_type', response.user.role || 'client');
 
       // Set token in API service
       apiService.setToken(response.access_token);
@@ -192,9 +192,9 @@ export const AuthProvider = ({ children }) => {
       const response = await apiService.verifyOtp(emailOrPhone, otp);
 
       // Save token and user
-      localStorage.setItem('zentrya_token', response.access_token);
-      localStorage.setItem('zentrya_user', JSON.stringify(response.user));
-      localStorage.setItem('zentrya_user_type', response.user.role || 'client');
+      localStorage.setItem('zentryatvtoken', response.access_token);
+      localStorage.setItem('zentryatvuser', JSON.stringify(response.user));
+      localStorage.setItem('zentryatvuser_type', response.user.role || 'client');
 
       // Set token in API service
       apiService.setToken(response.access_token);
@@ -235,10 +235,10 @@ export const AuthProvider = ({ children }) => {
       }
     } finally {
       // Clear local data
-      localStorage.removeItem('zentrya_token');
-      localStorage.removeItem('zentrya_user');
-      localStorage.removeItem('zentrya_user_type');
-      localStorage.removeItem('zentrya_current_profile');
+      localStorage.removeItem('zentryatvtoken');
+      localStorage.removeItem('zentryatvuser');
+      localStorage.removeItem('zentryatvuser_type');
+      localStorage.removeItem('zentryatvcurrent_profile');
       
       apiService.setToken(null);
       
@@ -277,7 +277,7 @@ export const AuthProvider = ({ children }) => {
   const clearCurrentProfile = useCallback(() => {
     try {
       // Remove from localStorage if it exists
-      localStorage.removeItem('zentrya_current_profile');
+      localStorage.removeItem('zentryatvcurrent_profile');
       setCurrentProfileState(null);
       console.log('✅ Profile cleared');
     } catch (err) {
@@ -288,7 +288,7 @@ export const AuthProvider = ({ children }) => {
   // 🔄 Refresh user data from storage
   const refreshUser = useCallback(() => {
     try {
-      const savedUser = localStorage.getItem('zentrya_user');
+      const savedUser = localStorage.getItem('zentryatvuser');
       
       if (savedUser) {
         const parsedUser = JSON.parse(savedUser);

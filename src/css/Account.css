@@ -1,6 +1,6 @@
 /* ==================== ACCOUNT SETTINGS - PRODUCTION READY ==================== */
 /* Netflix-style Account Settings with Full Backend Integration */
-/* ZENTRYA Gold Branding: #D4AF37 */
+/* Zentrya Gold Branding: #D4AF37 */
 
 /* ==================== VARIABLES ==================== */
 :root {
@@ -10,7 +10,7 @@
   --border-color: #3a3a3a;
   --text-primary: #ffffff;
   --text-secondary: #b3b3b3;
-  --zentrya-gold: #D4AF37;
+  --Zentrya-gold: #D4AF37;
   --gold-hover: #c99d2e;
   --success: #22c55e;
   --error: #ef4444;
@@ -38,7 +38,7 @@
 }
 
 .account-settings-loading .spinner {
-  color: var(--zentrya-gold);
+  color: var(--Zentrya-gold);
   animation: spin 1s linear infinite;
 }
 
@@ -76,7 +76,7 @@
 
 .back-button:hover {
   background-color: rgba(255, 255, 255, 0.08);
-  border-color: var(--zentrya-gold);
+  border-color: var(--Zentrya-gold);
 }
 
 .header-profile {
@@ -98,7 +98,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--zentrya-gold), var(--gold-hover));
+  background: linear-gradient(135deg, var(--Zentrya-gold), var(--gold-hover));
   color: var(--netflix-black);
   font-size: 20px;
   font-weight: 600;
@@ -207,7 +207,7 @@
   align-items: center;
   gap: 8px;
   padding: 12px 20px;
-  background-color: var(--zentrya-gold);
+  background-color: var(--Zentrya-gold);
   color: var(--netflix-black);
   border-radius: 6px;
   font-weight: 600;
@@ -299,7 +299,7 @@
 }
 
 .quick-link-card:hover {
-  border-color: var(--zentrya-gold);
+  border-color: var(--Zentrya-gold);
   transform: translateY(-2px);
 }
 
@@ -311,7 +311,7 @@
   justify-content: center;
   background-color: rgba(212, 175, 55, 0.1);
   border-radius: 8px;
-  color: var(--zentrya-gold);
+  color: var(--Zentrya-gold);
   flex-shrink: 0;
 }
 
@@ -394,7 +394,7 @@
 .plan-badge {
   display: inline-block;
   padding: 12px 24px;
-  background-color: var(--zentrya-gold);
+  background-color: var(--Zentrya-gold);
   color: var(--netflix-black);
   border-radius: 6px;
   font-size: 16px;
@@ -416,7 +416,7 @@
   background-color: var(--netflix-dark);
   border: 1px solid var(--border-color);
   border-radius: 4px;
-  color: var(--zentrya-gold);
+  color: var(--Zentrya-gold);
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.5px;
@@ -462,7 +462,7 @@
 }
 
 .reactivate-button {
-  background-color: var(--zentrya-gold);
+  background-color: var(--Zentrya-gold);
   color: var(--netflix-black);
 }
 
@@ -500,7 +500,7 @@
 
 .subscribe-button {
   padding: 14px 32px;
-  background-color: var(--zentrya-gold);
+  background-color: var(--Zentrya-gold);
   color: var(--netflix-black);
   border: none;
   border-radius: 4px;
@@ -550,7 +550,7 @@
 
 .password-input input:focus {
   outline: none;
-  border-color: var(--zentrya-gold);
+  border-color: var(--Zentrya-gold);
   background-color: var(--card-bg);
 }
 
@@ -595,7 +595,7 @@
 }
 
 .save-button:hover:not(:disabled) {
-  background-color: var(--zentrya-gold);
+  background-color: var(--Zentrya-gold);
 }
 
 .save-button:disabled {
@@ -638,7 +638,7 @@
   justify-content: center;
   background-color: rgba(212, 175, 55, 0.1);
   border-radius: 8px;
-  color: var(--zentrya-gold);
+  color: var(--Zentrya-gold);
   flex-shrink: 0;
 }
 
@@ -692,8 +692,8 @@
 }
 
 .logout-device-button:hover:not(:disabled) {
-  border-color: var(--zentrya-gold);
-  color: var(--zentrya-gold);
+  border-color: var(--Zentrya-gold);
+  color: var(--Zentrya-gold);
 }
 
 .logout-device-button:disabled {
@@ -752,7 +752,7 @@
   align-items: center;
   gap: 12px;
   padding: 14px 28px;
-  background-color: var(--zentrya-gold);
+  background-color: var(--Zentrya-gold);
   color: var(--netflix-black);
   border: none;
   border-radius: 4px;

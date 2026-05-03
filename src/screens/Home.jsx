@@ -421,7 +421,7 @@ const Home = () => {
       <div className="home-loading-container">
         <div className="glassmorphism-loader">
           <div className="loader-content">
-            <div className="zentrya-logo-loader">ZENTRYA</div>
+            <div className="Zentrya Tv-logo-loader">Zentrya Tv</div>
             <div className="loader-spinner">
               <div className="spinner-ring"></div>
               <div className="spinner-ring"></div>
@@ -468,7 +468,7 @@ const Home = () => {
       {/* Navigation Bar */}
       <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
         <div className="navbar-left">
-          <div className="logo" onClick={() => navigate('/home')}>ZENTRYA</div>
+          <div className="logo" onClick={() => navigate('/home')}>Zentrya Tv</div>
           <ul className="nav-links">
             <li><a href="/home" className="active">Home</a></li>
             <li><a href="/shows">Shows</a></li>
@@ -560,7 +560,7 @@ const Home = () => {
                 <div className="profile-menu-divider"></div>
                 
                 <button onClick={handleLogout} className="profile-menu-link">
-                  Sign out of Zentrya
+                  Sign out of Zentrya Tv
                 </button>
               </div>
             )}
@@ -588,7 +588,7 @@ const Home = () => {
                 src={getBannerUrl(heroContent)} 
                 alt={heroContent.title}
                 onError={(e) => {
-                  e.target.src = 'https://via.placeholder.com/1920x1080/141414/D4AF37?text=ZENTRYA';
+                  e.target.src = 'https://via.placeholder.com/1920x1080/141414/D4AF37?text=Zentrya Tv';
                 }}
               />
               <div className="hero-gradient"></div>
@@ -878,7 +878,7 @@ const ContentDetailsModal = ({ content, onClose, onPlay, onAddToMyList }) => {
             <div className="modal-meta-row">
               {content.rating && (
                 <span className="modal-match">
-                  <Star size={16} fill="var(--zentrya-gold)" color="var(--zentrya-gold)" />
+                  <Star size={16} fill="var(--Zentrya Tv-gold)" color="var(--Zentrya Tv-gold)" />
                   {Math.round(content.rating * 10)}% Match
                 </span>
               )}
